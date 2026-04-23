@@ -99,6 +99,8 @@ SNAPSHOT_TABLES = (
     "gartic_games",
     "giveaway_configs",
     "giveaway_entries",
+    "poll_entries",
+    "poll_votes",
     "ticket_panels",
     "ticket_entries",
     "tod_prompts",
@@ -689,6 +691,28 @@ def init_db():
         updated_at TEXT NOT NULL
     )''')
     c.execute('CREATE INDEX IF NOT EXISTS idx_giveaway_entries_guild_status_end ON giveaway_entries (guild_id, status, end_at)')
+    c.execute('''CREATE TABLE IF NOT EXISTS poll_entries (
+        message_id INTEGER PRIMARY KEY,
+        guild_id INTEGER NOT NULL,
+        channel_id INTEGER NOT NULL,
+        question TEXT NOT NULL,
+        description TEXT,
+        choices_json TEXT NOT NULL,
+        created_by_user_id INTEGER NOT NULL,
+        end_at TEXT NOT NULL,
+        status TEXT NOT NULL,
+        closed_at TEXT,
+        updated_at TEXT NOT NULL
+    )''')
+    c.execute('CREATE INDEX IF NOT EXISTS idx_poll_entries_guild_status_end ON poll_entries (guild_id, status, end_at)')
+    c.execute('''CREATE TABLE IF NOT EXISTS poll_votes (
+        message_id INTEGER NOT NULL,
+        user_id INTEGER NOT NULL,
+        choice_index INTEGER NOT NULL,
+        voted_at TEXT NOT NULL,
+        PRIMARY KEY (message_id, user_id)
+    )''')
+    c.execute('CREATE INDEX IF NOT EXISTS idx_poll_votes_message_choice ON poll_votes (message_id, choice_index)')
     c.execute('''CREATE TABLE IF NOT EXISTS tod_prompts (
         guild_id INTEGER,
         prompt_type TEXT NOT NULL,
@@ -1720,6 +1744,130 @@ def mark_giveaway_ended(message_id):
            SET status = 'ended', ended_at = ?, updated_at = ?
            WHERE message_id = ?''',
         (datetime.utcnow().isoformat() + "Z", datetime.utcnow().isoformat() + "Z", message_id)
+    )
+    updated = c.rowcount > 0
+    conn.commit()
+    conn.close()
+    if updated:
+        write_snapshot()
+    return updated
+
+
+def upsert_poll_entry(message_id, guild_id, channel_id, question, description, choices, created_by_user_id, end_at, status="active"):
+    conn = get_connection()
+    c = conn.cursor()
+    c.execute(
+        '''INSERT INTO poll_entries (message_id, guild_id, channel_id, question, description, choices_json, created_by_user_id, end_at, status, closed_at, updated_at)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, NULL, ?)
+           ON CONFLICT(message_id) DO UPDATE SET
+           guild_id = excluded.guild_id,
+           channel_id = excluded.channel_id,
+           question = excluded.question,
+           description = excluded.description,
+           choices_json = excluded.choices_json,
+           created_by_user_id = excluded.created_by_user_id,
+           end_at = excluded.end_at,
+           status = excluded.status,
+           updated_at = excluded.updated_at''',
+        (
+            message_id,
+            guild_id,
+            channel_id,
+            question,
+            description,
+            json.dumps(choices),
+            created_by_user_id,
+            end_at,
+            status,
+            datetime.utcnow().isoformat() + "Z",
+        )
+    )
+    conn.commit()
+    conn.close()
+    write_snapshot()
+
+
+def get_poll_entry(message_id):
+    conn = get_connection()
+    c = conn.cursor()
+    c.execute('SELECT * FROM poll_entries WHERE message_id = ?', (message_id,))
+    row = c.fetchone()
+    conn.close()
+    if not row:
+        return None
+    data = dict(row)
+    data["choices"] = json.loads(data.pop("choices_json") or "[]")
+    return data
+
+
+def list_due_polls(before_iso_utc):
+    conn = get_connection()
+    c = conn.cursor()
+    c.execute(
+        '''SELECT * FROM poll_entries
+           WHERE status = 'active' AND end_at <= ?
+           ORDER BY end_at ASC''',
+        (before_iso_utc,)
+    )
+    rows = []
+    for row in c.fetchall():
+        data = dict(row)
+        data["choices"] = json.loads(data.pop("choices_json") or "[]")
+        rows.append(data)
+    conn.close()
+    return rows
+
+
+def add_or_update_poll_vote(message_id, user_id, choice_index):
+    now = datetime.utcnow().isoformat() + "Z"
+    conn = get_connection()
+    c = conn.cursor()
+    c.execute(
+        '''INSERT INTO poll_votes (message_id, user_id, choice_index, voted_at)
+           VALUES (?, ?, ?, ?)
+           ON CONFLICT(message_id, user_id) DO UPDATE SET
+           choice_index = excluded.choice_index,
+           voted_at = excluded.voted_at''',
+        (message_id, user_id, choice_index, now)
+    )
+    conn.commit()
+    conn.close()
+    write_snapshot()
+
+
+def get_poll_vote_counts(message_id):
+    conn = get_connection()
+    c = conn.cursor()
+    c.execute(
+        '''SELECT choice_index, COUNT(*) AS vote_count
+           FROM poll_votes
+           WHERE message_id = ?
+           GROUP BY choice_index''',
+        (message_id,)
+    )
+    counts = {int(row["choice_index"]): int(row["vote_count"]) for row in c.fetchall()}
+    conn.close()
+    return counts
+
+
+def get_poll_total_voters(message_id):
+    conn = get_connection()
+    c = conn.cursor()
+    c.execute('SELECT COUNT(*) AS count FROM poll_votes WHERE message_id = ?', (message_id,))
+    row = c.fetchone()
+    conn.close()
+    return int(row["count"]) if row else 0
+
+
+def mark_poll_closed(message_id):
+    now = datetime.utcnow().isoformat() + "Z"
+    conn = get_connection()
+    c = conn.cursor()
+    c.execute(
+        '''UPDATE poll_entries
+           SET status = 'closed', closed_at = ?, updated_at = ?
+           WHERE message_id = ?''',
+        (now, now, message_id)
     )
     updated = c.rowcount > 0
     conn.commit()
