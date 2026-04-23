@@ -5710,7 +5710,8 @@ async def _send_announcement_to_channels(
     message: str,
     title: str = "Announcement",
     author: Union[str, None] = None,
-    include_timestamp: bool = False
+    include_timestamp: bool = False,
+    ping_role: Union[discord.Role, None] = None
 ):
     if not interaction.guild:
         await interaction.response.send_message("This command can only be used in a server.", ephemeral=True)
@@ -5754,7 +5755,7 @@ async def _send_announcement_to_channels(
 
     for channel in unique_channels:
         try:
-            await channel.send(embed=embed)
+            await channel.send(content=ping_role.mention if ping_role else None, embed=embed)
             sent_mentions.append(channel.mention)
         except Exception as e:
             logger.warning("Failed to send announcement in guild %s channel %s: %s", interaction.guild_id, channel.id, e)
@@ -5783,7 +5784,8 @@ async def _send_announcement_to_channels(
     title="Announcement title",
     message="Announcement message/body",
     timestamp="Include current timestamp in the embed",
-    author="Author shown on the announcement embed"
+    author="Author shown on the announcement embed",
+    assignrole="Optional role to ping with the announcement"
 )
 async def annoucements_slash(
     interaction: discord.Interaction,
@@ -5795,7 +5797,8 @@ async def annoucements_slash(
     title: str = "Announcement",
     message: str = "📢 Announcement",
     timestamp: bool = False,
-    author: Union[str, None] = None
+    author: Union[str, None] = None,
+    assignrole: Union[discord.Role, None] = None
 ):
     data = load_attendance_data(interaction.guild_id)
     selected_channels = [channel1, channel2, channel3, channel4, channel5]
@@ -5837,7 +5840,8 @@ async def annoucements_slash(
         send_message,
         send_title,
         send_author,
-        timestamp
+        timestamp,
+        assignrole
     )
 
 class BaseSettingsView(discord.ui.View):
