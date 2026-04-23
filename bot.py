@@ -2138,6 +2138,30 @@ async def strip_all_from_role(ctx, role: discord.Role = None, *, text_to_remove:
     await ctx.send(f"✅ Removed `{token}` from **{changed}** nicknames in {role.mention}.")
 
 
+async def _reset_member_nicknames(guild: discord.Guild, members: list[discord.Member]):
+    changed = 0
+    skipped = 0
+    failed = 0
+
+    for member in members:
+        if member.id == guild.owner_id or member.top_role >= guild.me.top_role:
+            skipped += 1
+            continue
+        if member.nick is None:
+            skipped += 1
+            continue
+        try:
+            await member.edit(nick=None)
+            changed += 1
+        except discord.Forbidden:
+            failed += 1
+        except Exception as e:
+            logger.warning("Failed to reset nickname for %s in guild %s: %s", member.id, guild.id, e)
+            failed += 1
+
+    return changed, skipped, failed
+
+
 @bot.command(name='nickresetall', aliases=['nickreset'])
 @commands.has_permissions(manage_nicknames=True)
 async def nick_reset_all(ctx, role: discord.Role = None, *, scope: str = None):
@@ -2163,29 +2187,42 @@ async def nick_reset_all(ctx, role: discord.Role = None, *, scope: str = None):
         members = list(role.members)
         scope_label = f"members with {role.mention}"
 
-    changed = 0
-    skipped = 0
-    failed = 0
-
-    for member in members:
-        if member.id == ctx.guild.owner_id or member.top_role >= ctx.guild.me.top_role:
-            skipped += 1
-            continue
-        if member.nick is None:
-            skipped += 1
-            continue
-        try:
-            await member.edit(nick=None)
-            changed += 1
-        except discord.Forbidden:
-            failed += 1
-        except Exception as e:
-            logger.warning("Failed to reset nickname for %s in guild %s: %s", member.id, ctx.guild.id, e)
-            failed += 1
+    changed, skipped, failed = await _reset_member_nicknames(ctx.guild, members)
 
     await ctx.send(
         f"✅ Nickname reset complete for {scope_label}. "
         f"Reset: **{changed}**, skipped: **{skipped}**, failed: **{failed}**."
+    )
+
+
+@bot.tree.command(name="resetallnick", description="Reset nicknames to account names for everyone or one role.")
+@app_commands.describe(role="Optional role to limit the reset.")
+async def resetallnick_slash(interaction: discord.Interaction, role: discord.Role | None = None):
+    if not interaction.guild:
+        await interaction.response.send_message("This command can only be used inside a server.", ephemeral=True)
+        return
+    if not interaction.user.guild_permissions.manage_nicknames:
+        await interaction.response.send_message("You need **Manage Nicknames** permission to use this command.", ephemeral=True)
+        return
+
+    await interaction.response.defer(ephemeral=True, thinking=True)
+
+    if role is None:
+        try:
+            members = [m async for m in interaction.guild.fetch_members(limit=None)]
+        except Exception as e:
+            logger.warning("Falling back to cached members during slash nick reset for guild %s: %s", interaction.guild.id, e)
+            members = list(interaction.guild.members)
+        scope_label = "all members"
+    else:
+        members = list(role.members)
+        scope_label = f"members with {role.mention}"
+
+    changed, skipped, failed = await _reset_member_nicknames(interaction.guild, members)
+    await interaction.followup.send(
+        f"✅ Nickname reset complete for {scope_label}. "
+        f"Reset: **{changed}**, skipped: **{skipped}**, failed: **{failed}**.",
+        ephemeral=True
     )
 
 
@@ -3022,6 +3059,7 @@ def build_help_embeds() -> list[discord.Embed]:
             "`!removeall @Role` - Remove that role's tag from members and delete mapping.",
             "`!stripall @Role [TagToRemove]` - Strip specific text from nicknames by role.",
             "`!nickresetall [@Role]` - Reset nicknames to account names for everyone or one role.",
+            "`/resetallnick [role]` - Slash version to reset nicknames for everyone or one role.",
             "`!nicksettings` - Show current default tag and role mappings."
         ],
         "Custom Commands": [
