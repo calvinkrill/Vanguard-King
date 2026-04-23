@@ -8712,6 +8712,59 @@ async def delete_all_message(ctx):
     except discord.Forbidden:
         await ctx.channel.send(summary, delete_after=8)
 
+
+@bot.hybrid_command(
+    name='vchatdeletemessage',
+    with_app_command=True,
+    description="Delete messages from a voice channel chat."
+)
+@app_commands.describe(
+    channel="Voice or stage channel whose chat messages should be deleted (defaults to current channel).",
+    amount="How many recent messages to delete (1-500, default 100)."
+)
+@commands.has_permissions(manage_messages=True)
+@commands.guild_only()
+async def vchat_delete_message(
+    ctx,
+    channel: discord.VoiceChannel | None = None,
+    amount: app_commands.Range[int, 1, 500] = 100,
+):
+    target_channel = channel or ctx.channel
+    if not isinstance(target_channel, (discord.VoiceChannel, discord.StageChannel)):
+        await ctx.send("❌ Please select a voice/stage channel chat to clear.", ephemeral=bool(ctx.interaction))
+        return
+
+    if ctx.interaction:
+        await ctx.defer(ephemeral=True)
+
+    deleted = 0
+    failed = 0
+
+    try:
+        async for message in target_channel.history(limit=amount, oldest_first=False):
+            try:
+                await message.delete(reason=f"VC chat clear requested by {ctx.author} ({ctx.author.id})")
+                deleted += 1
+            except (discord.Forbidden, discord.HTTPException):
+                failed += 1
+    except (discord.Forbidden, discord.HTTPException):
+        summary = f"⚠️ I couldn't read chat history for {target_channel.mention}. Check my permissions."
+        if ctx.interaction:
+            await ctx.followup.send(summary, ephemeral=True)
+        else:
+            await ctx.send(summary)
+        return
+
+    summary = (
+        f"✅ Deleted **{deleted}** message(s) from {target_channel.mention} chat."
+        + (f" ⚠️ Failed to delete **{failed}** message(s)." if failed else "")
+    )
+    if ctx.interaction:
+        await ctx.followup.send(summary, ephemeral=True)
+    else:
+        await ctx.send(summary)
+
+
 @bot.command(name='attendance')
 async def view_attendance(ctx):
     """
