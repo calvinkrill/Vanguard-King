@@ -5429,26 +5429,13 @@ async def say_slash(interaction: discord.Interaction, message: str):
 @app_commands.describe(
     title="Embed title",
     message="Embed message body",
-    image="Optional image URL to show in the embed",
-    color="Embed color theme",
-    author="Optional custom author name shown on the embed"
+    image="Optional image URL to show in the embed"
 )
-@app_commands.choices(color=[
-    app_commands.Choice(name="Blurple", value="blurple"),
-    app_commands.Choice(name="Green", value="green"),
-    app_commands.Choice(name="Gold", value="gold"),
-    app_commands.Choice(name="Red", value="red"),
-    app_commands.Choice(name="Purple", value="purple"),
-    app_commands.Choice(name="Teal", value="teal"),
-    app_commands.Choice(name="Orange", value="orange"),
-])
 async def message_embed_slash(
     interaction: discord.Interaction,
     title: str,
     message: str,
-    image: Optional[str] = None,
-    color: Optional[app_commands.Choice[str]] = None,
-    author: Optional[str] = None
+    image: Optional[str] = None
 ):
     channel = interaction.channel
     guild = interaction.guild
@@ -5467,39 +5454,22 @@ async def message_embed_slash(
             return
         image_url = image.strip()
 
-    color_map = {
-        "blurple": discord.Color.blurple(),
-        "green": discord.Color.green(),
-        "gold": discord.Color.gold(),
-        "red": discord.Color.red(),
-        "purple": discord.Color.purple(),
-        "teal": discord.Color.teal(),
-        "orange": discord.Color.orange(),
-    }
-    selected_color = color_map.get(color.value if color else "blurple", discord.Color.blurple())
-
     embed = discord.Embed(
         title=title.strip(),
         description=message,
-        color=selected_color,
+        color=discord.Color.blurple(),
         timestamp=discord.utils.utcnow()
     )
-    embed_author = (author or interaction.user.display_name).strip()[:256]
-    if not embed_author:
-        embed_author = interaction.user.display_name
-    embed.set_author(name=embed_author, icon_url=interaction.user.display_avatar.url)
+    embed.set_author(name=interaction.user.display_name, icon_url=interaction.user.display_avatar.url)
     embed.add_field(name="Server", value=guild.name, inline=False)
-    if guild.icon:
-        embed.set_thumbnail(url=guild.icon.url)
     if image_url:
         embed.set_image(url=image_url)
-    embed.set_footer(text=f"Server ID: {guild.id} • Author ID: {interaction.user.id}")
+    embed.set_footer(text=f"Author ID: {interaction.user.id}")
 
     await interaction.response.send_message("✅ Embedded message sent.", ephemeral=True)
     await channel.send(embed=embed)
 
-    color_value = color.value if color else "blurple"
-    log_content = f"[EMBED] Title: {title} | Message: {message} | Author: {embed_author} | Color: {color_value}"
+    log_content = f"[EMBED] Title: {title} | Message: {message}"
     if image_url:
         log_content += f" | Image: {image_url}"
     await log_say_message(
