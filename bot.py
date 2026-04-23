@@ -28,6 +28,7 @@ from slash_commands.extended_systems import (
     process_agenda_reminders,
     process_birthdays,
     process_due_giveaways,
+    process_due_polls,
     register_extended_slash_commands,
 )
 
@@ -8686,6 +8687,7 @@ async def _process_staff_attendance_reminders(guild: discord.Guild, data: dict):
 @tasks.loop(minutes=1)
 async def check_attendance_expiry():
     await process_due_giveaways(bot)
+    await process_due_polls(bot)
     await process_birthdays(bot)
     await process_agenda_reminders(bot)
     # Iterate over guilds first, then load data for each
