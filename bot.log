@@ -1,0 +1,1147 @@
+2026-02-02 01:17:14,905 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 01:17:14,915 [INFO] logging in using static token
+2026-02-02 01:17:15,174 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-02 01:17:15,177 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-02 01:17:17,175 [INFO] Shard ID None has connected to Gateway (Session ID: 1de964a3713625b2c3691a23d8841f5f).
+2026-02-02 01:17:18,309 [INFO] Command-like message received from calv.xmv: !assignchannel <#1467136669152055512>
+2026-02-02 01:17:18,314 [INFO] Report channel set to 📋・attendance (1467136669152055512) for guild 1434956894262399108
+2026-02-02 01:17:19,238 [INFO] Logged in as Registrarbot
+2026-02-02 01:17:19,238 [INFO] Bot is ready to auto-nickname users!
+2026-02-02 01:17:39,250 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 01:17:39,259 [INFO] logging in using static token
+2026-02-02 01:17:39,289 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-02 01:17:39,290 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-02 01:17:41,158 [INFO] Shard ID None has connected to Gateway (Session ID: 4455c6cea8a9aa59db44f6bf06d0903f).
+2026-02-02 01:17:43,207 [INFO] Logged in as Registrarbot
+2026-02-02 01:17:43,208 [INFO] Bot is ready to auto-nickname users!
+2026-02-02 01:17:48,995 [INFO] Command-like message received from calv.xmv: !settime 6am to 11pm
+2026-02-02 01:17:48,995 [INFO] Command-like message received from calv.xmv: !settime 6am to 11pm
+2026-02-02 01:17:48,996 [INFO] Command execution started: settime with input '6am to 11pm'
+2026-02-02 01:17:48,996 [INFO] Command execution started: settime with input '6am to 11pm'
+2026-02-02 01:17:48,996 [INFO] Processing time input: '6am to 11pm'
+2026-02-02 01:17:48,997 [INFO] Processing time input: '6am to 11pm'
+2026-02-02 01:17:49,004 [INFO] Successfully saved settings: 06:00 - 23:00
+2026-02-02 01:17:49,004 [INFO] Successfully saved settings: 06:00 - 23:00
+2026-02-02 01:18:12,569 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 01:18:12,571 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 01:18:19,247 [INFO] Triggering End-of-Day for ONEMSU (Date: 2026-02-01)
+2026-02-02 01:18:19,248 [WARNING] Cannot auto-mark absences for ONEMSU: No 'allowed_role' configured.
+2026-02-02 01:18:19,743 [INFO] Attendance reset complete for ONEMSU
+2026-02-02 01:18:43,217 [INFO] Triggering End-of-Day for ONEMSU (Date: 2026-02-01)
+2026-02-02 01:18:43,217 [WARNING] Cannot auto-mark absences for ONEMSU: No 'allowed_role' configured.
+2026-02-02 01:18:44,184 [INFO] Attendance reset complete for ONEMSU
+2026-02-02 01:19:25,366 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 01:19:25,617 [INFO] logging in using static token
+2026-02-02 01:19:25,658 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-02 01:19:25,658 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-02 01:19:28,122 [INFO] Shard ID None has connected to Gateway (Session ID: 4860a95fb50b4813396473d20c1908c8).
+2026-02-02 01:19:30,415 [INFO] Logged in as Registrarbot
+2026-02-02 01:19:30,415 [INFO] Bot is ready to auto-nickname users!
+2026-02-02 01:19:30,416 [INFO] Triggering End-of-Day for ONEMSU (Date: 2026-02-01)
+2026-02-02 01:19:30,416 [WARNING] Cannot auto-mark absences for ONEMSU: No 'allowed_role' configured.
+2026-02-02 01:19:31,215 [INFO] Attendance reset complete for ONEMSU
+2026-02-02 01:19:47,104 [INFO] Command-like message received from calv.xmv: !resetime
+2026-02-02 01:20:16,447 [INFO] Command-like message received from calv.xmv: !settime 5am to 11:59 pm
+2026-02-02 01:20:16,449 [INFO] Command execution started: settime with input '5am to 11:59 pm'
+2026-02-02 01:20:16,449 [INFO] Processing time input: '5am to 11:59 pm'
+2026-02-02 01:20:16,451 [INFO] Successfully saved settings: 05:00 - 23:59
+2026-02-02 01:20:30,426 [INFO] Triggering End-of-Day for ONEMSU (Date: 2026-02-01)
+2026-02-02 01:20:30,427 [WARNING] Cannot auto-mark absences for ONEMSU: No 'allowed_role' configured.
+2026-02-02 01:20:30,921 [INFO] Attendance reset complete for ONEMSU
+2026-02-02 01:21:30,420 [INFO] Triggering End-of-Day for ONEMSU (Date: 2026-02-01)
+2026-02-02 01:21:30,420 [WARNING] Cannot auto-mark absences for ONEMSU: No 'allowed_role' configured.
+2026-02-02 01:21:31,084 [INFO] Attendance reset complete for ONEMSU
+2026-02-02 01:22:30,430 [INFO] Triggering End-of-Day for ONEMSU (Date: 2026-02-01)
+2026-02-02 01:22:30,430 [WARNING] Cannot auto-mark absences for ONEMSU: No 'allowed_role' configured.
+2026-02-02 01:22:31,194 [INFO] Attendance reset complete for ONEMSU
+2026-02-02 01:23:19,458 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 01:23:30,430 [INFO] Triggering End-of-Day for ONEMSU (Date: 2026-02-01)
+2026-02-02 01:23:30,431 [WARNING] Cannot auto-mark absences for ONEMSU: No 'allowed_role' configured.
+2026-02-02 01:23:30,917 [INFO] Attendance reset complete for ONEMSU
+2026-02-02 01:23:54,865 [INFO] Command-like message received from calv.xmv: !removepresent <@836128654983168002>
+2026-02-02 01:24:16,718 [INFO] Command-like message received from calv.xmv: !restartattendance
+2026-02-02 01:24:30,418 [INFO] Triggering End-of-Day for ONEMSU (Date: 2026-02-01)
+2026-02-02 01:24:30,419 [WARNING] Cannot auto-mark absences for ONEMSU: No 'allowed_role' configured.
+2026-02-02 01:24:31,008 [INFO] Attendance reset complete for ONEMSU
+2026-02-02 01:24:41,437 [INFO] Command-like message received from calv.xmv: !restartattendance
+2026-02-02 01:24:49,917 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 01:25:30,431 [INFO] Triggering End-of-Day for ONEMSU (Date: 2026-02-01)
+2026-02-02 01:25:30,431 [WARNING] Cannot auto-mark absences for ONEMSU: No 'allowed_role' configured.
+2026-02-02 01:25:30,992 [INFO] Attendance reset complete for ONEMSU
+2026-02-02 01:26:30,426 [INFO] Triggering End-of-Day for ONEMSU (Date: 2026-02-01)
+2026-02-02 01:26:30,427 [WARNING] Cannot auto-mark absences for ONEMSU: No 'allowed_role' configured.
+2026-02-02 01:26:31,341 [INFO] Attendance reset complete for ONEMSU
+2026-02-02 01:26:39,299 [INFO] Command-like message received from calv.xmv: !restartattendance
+2026-02-02 01:26:53,447 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 01:27:20,084 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 01:28:27,832 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 01:28:27,844 [INFO] logging in using static token
+2026-02-02 01:28:27,882 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-02 01:28:27,883 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-02 01:28:30,095 [INFO] Shard ID None has connected to Gateway (Session ID: 43ca7476184dfd2227838ad369992ac2).
+2026-02-02 01:28:32,128 [INFO] Logged in as Registrarbot
+2026-02-02 01:28:32,128 [INFO] Bot is ready to auto-nickname users!
+2026-02-02 01:28:32,135 [INFO] Triggering End-of-Day for ONEMSU (Date: 2026-02-01)
+2026-02-02 01:28:32,136 [WARNING] Cannot auto-mark absences for ONEMSU: No 'allowed_role' configured.
+2026-02-02 01:28:32,555 [INFO] Attendance reset complete for ONEMSU
+2026-02-02 01:28:49,205 [INFO] Command-like message received from calv.xmv: !viewreport
+2026-02-02 01:29:32,143 [INFO] Triggering End-of-Day for ONEMSU (Date: 2026-02-01)
+2026-02-02 01:29:32,144 [WARNING] Cannot auto-mark absences for ONEMSU: No 'allowed_role' configured.
+2026-02-02 01:29:32,686 [INFO] Attendance reset complete for ONEMSU
+2026-02-02 01:30:32,140 [INFO] Triggering End-of-Day for ONEMSU (Date: 2026-02-01)
+2026-02-02 01:30:32,141 [WARNING] Cannot auto-mark absences for ONEMSU: No 'allowed_role' configured.
+2026-02-02 01:30:32,662 [INFO] Attendance reset complete for ONEMSU
+2026-02-02 01:30:59,123 [INFO] Command-like message received from calv.xmv: !restartattendance
+2026-02-02 01:31:32,141 [INFO] Triggering End-of-Day for ONEMSU (Date: 2026-02-01)
+2026-02-02 01:31:32,142 [WARNING] Cannot auto-mark absences for ONEMSU: No 'allowed_role' configured.
+2026-02-02 01:31:32,769 [INFO] Attendance reset complete for ONEMSU
+2026-02-02 01:31:52,771 [INFO] Command-like message received from calv.xmv: !resetattendance
+2026-02-02 01:32:32,136 [INFO] Triggering End-of-Day for ONEMSU (Date: 2026-02-01)
+2026-02-02 01:32:32,137 [WARNING] Cannot auto-mark absences for ONEMSU: No 'allowed_role' configured.
+2026-02-02 01:32:32,829 [INFO] Attendance reset complete for ONEMSU
+2026-02-02 01:33:03,835 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 01:33:03,842 [INFO] logging in using static token
+2026-02-02 01:33:03,871 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-02 01:33:03,871 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-02 01:33:05,904 [INFO] Shard ID None has connected to Gateway (Session ID: abb376c6a1b5b5d4a1454534e76bc399).
+2026-02-02 01:33:07,953 [INFO] Logged in as Registrarbot
+2026-02-02 01:33:07,957 [INFO] Bot is ready to auto-nickname users!
+2026-02-02 01:33:07,970 [INFO] Triggering End-of-Day for ONEMSU (Date: 2026-02-01)
+2026-02-02 01:33:07,972 [WARNING] Cannot auto-mark absences for ONEMSU: No 'allowed_role' configured.
+2026-02-02 01:33:08,505 [INFO] Attendance reset complete for ONEMSU
+2026-02-02 01:34:01,349 [INFO] Command-like message received from calv.xmv: !viewreport
+2026-02-02 01:34:07,968 [INFO] Triggering End-of-Day for ONEMSU (Date: 2026-02-01)
+2026-02-02 01:34:07,968 [WARNING] Cannot auto-mark absences for ONEMSU: No 'allowed_role' configured.
+2026-02-02 01:34:08,366 [INFO] Attendance reset complete for ONEMSU
+2026-02-02 01:34:57,312 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 01:35:07,969 [INFO] Triggering End-of-Day for ONEMSU (Date: 2026-02-01)
+2026-02-02 01:35:07,969 [WARNING] Cannot auto-mark absences for ONEMSU: No 'allowed_role' configured.
+2026-02-02 01:35:08,375 [INFO] Attendance reset complete for ONEMSU
+2026-02-02 01:35:11,730 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 01:35:34,031 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 01:36:07,963 [INFO] Triggering End-of-Day for ONEMSU (Date: 2026-02-01)
+2026-02-02 01:36:07,963 [WARNING] Cannot auto-mark absences for ONEMSU: No 'allowed_role' configured.
+2026-02-02 01:36:08,467 [INFO] Attendance reset complete for ONEMSU
+2026-02-02 01:36:35,209 [INFO] Command-like message received from calv.xmv: !removeexcuse <@926757288230944800>
+2026-02-02 01:36:46,059 [INFO] Command-like message received from calv.xmv: !removeexcuse <@926757288230944800>
+2026-02-02 01:37:07,963 [INFO] Triggering End-of-Day for ONEMSU (Date: 2026-02-01)
+2026-02-02 01:37:07,964 [WARNING] Cannot auto-mark absences for ONEMSU: No 'allowed_role' configured.
+2026-02-02 01:37:08,562 [INFO] Attendance reset complete for ONEMSU
+2026-02-02 01:37:16,207 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 01:37:22,690 [INFO] Command-like message received from calv.xmv: !update
+2026-02-02 01:37:51,501 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 01:38:07,967 [INFO] Triggering End-of-Day for ONEMSU (Date: 2026-02-01)
+2026-02-02 01:38:07,967 [WARNING] Cannot auto-mark absences for ONEMSU: No 'allowed_role' configured.
+2026-02-02 01:38:08,504 [INFO] Attendance reset complete for ONEMSU
+2026-02-02 01:39:07,962 [INFO] Triggering End-of-Day for ONEMSU (Date: 2026-02-01)
+2026-02-02 01:39:07,963 [WARNING] Cannot auto-mark absences for ONEMSU: No 'allowed_role' configured.
+2026-02-02 01:39:08,558 [INFO] Attendance reset complete for ONEMSU
+2026-02-02 01:40:07,963 [INFO] Triggering End-of-Day for ONEMSU (Date: 2026-02-01)
+2026-02-02 01:40:07,963 [WARNING] Cannot auto-mark absences for ONEMSU: No 'allowed_role' configured.
+2026-02-02 01:40:08,495 [INFO] Attendance reset complete for ONEMSU
+2026-02-02 01:40:27,494 [INFO] Command-like message received from calv.xmv: !resetattendance
+2026-02-02 01:40:36,808 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 01:40:55,135 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 01:40:55,141 [INFO] logging in using static token
+2026-02-02 01:40:55,184 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-02 01:40:55,185 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-02 01:40:57,095 [INFO] Shard ID None has connected to Gateway (Session ID: da1772bc62c8ea9af7e845e533b39ee3).
+2026-02-02 01:40:59,141 [INFO] Logged in as Registrarbot
+2026-02-02 01:40:59,142 [INFO] Bot is ready to auto-nickname users!
+2026-02-02 01:42:04,373 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 01:42:23,763 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 01:43:24,576 [INFO] Command-like message received from calv.xmv: !resetattendance
+2026-02-02 01:43:54,202 [INFO] Command-like message received from calv.xmv: !resetattendance
+2026-02-02 01:44:05,804 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 01:45:58,141 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 01:45:58,148 [INFO] logging in using static token
+2026-02-02 01:45:58,176 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-02 01:45:58,177 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-02 01:46:00,057 [INFO] Shard ID None has connected to Gateway (Session ID: 0c17085416b7f78983d0d46dca1bfbce).
+2026-02-02 01:46:02,174 [INFO] Logged in as Registrarbot
+2026-02-02 01:46:02,184 [INFO] Bot is ready to auto-nickname users!
+2026-02-02 01:47:06,162 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 01:47:29,412 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 01:48:23,775 [INFO] Command-like message received from calv.xmv: !resetattendance
+2026-02-02 01:48:37,676 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 01:48:54,504 [INFO] Command-like message received from calv.xmv: !removepresent <@836128654983168002>
+2026-02-02 01:49:38,165 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 01:49:38,177 [INFO] logging in using static token
+2026-02-02 01:49:38,231 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-02 01:49:38,231 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-02 01:49:40,420 [INFO] Shard ID None has connected to Gateway (Session ID: 71161abdeecf85d1306f423a40ccabc5).
+2026-02-02 01:49:42,482 [INFO] Logged in as Registrarbot
+2026-02-02 01:49:42,482 [INFO] Bot is ready to auto-nickname users!
+2026-02-02 01:49:54,661 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 01:50:08,126 [INFO] Command-like message received from calv.xmv: !removepresent <@836128654983168002>
+2026-02-02 01:50:20,115 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 01:51:14,228 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 01:51:14,238 [INFO] logging in using static token
+2026-02-02 01:51:14,266 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-02 01:51:14,266 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-02 01:51:16,002 [INFO] Shard ID None has connected to Gateway (Session ID: d30d8903f94e194cf8cf7a2be02e6c40).
+2026-02-02 01:51:18,055 [INFO] Logged in as Registrarbot
+2026-02-02 01:51:18,056 [INFO] Bot is ready to auto-nickname users!
+2026-02-02 01:57:49,765 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 01:58:30,100 [INFO] Command-like message received from calv.xmv: !removepresent <@836128654983168002>
+2026-02-02 01:58:38,073 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 01:59:10,883 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 01:59:10,890 [INFO] logging in using static token
+2026-02-02 01:59:10,934 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-02 01:59:10,934 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-02 01:59:13,030 [INFO] Shard ID None has connected to Gateway (Session ID: e747f45f7b4e1eb05d777e04b3102295).
+2026-02-02 01:59:15,072 [INFO] Logged in as Registrarbot
+2026-02-02 01:59:15,073 [INFO] Bot is ready to auto-nickname users!
+2026-02-02 02:03:02,052 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 02:03:02,058 [INFO] logging in using static token
+2026-02-02 02:03:02,094 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-02 02:03:02,095 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-02 02:03:03,904 [INFO] Shard ID None has connected to Gateway (Session ID: 954934b5a1f4956aa2fe2121c7bbaf1d).
+2026-02-02 02:03:05,937 [INFO] Logged in as Registrarbot
+2026-02-02 02:03:05,937 [INFO] Bot is ready to auto-nickname users!
+2026-02-02 02:04:19,753 [INFO] Command-like message received from calv.xmv: !resetattendance
+2026-02-02 02:04:28,170 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 02:06:00,900 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 02:06:20,012 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 02:06:20,021 [INFO] logging in using static token
+2026-02-02 02:06:20,056 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-02 02:06:20,057 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-02 02:06:21,774 [INFO] Shard ID None has connected to Gateway (Session ID: 9cf69156db3a1192e319550371fe664e).
+2026-02-02 02:06:23,942 [INFO] Logged in as Registrarbot
+2026-02-02 02:06:23,942 [INFO] Bot is ready to auto-nickname users!
+2026-02-02 02:06:34,110 [INFO] Command-like message received from calv.xmv: !presentrole <@&1466749791529730142>
+2026-02-02 02:06:37,008 [WARNING] We are being rate limited. PUT https://discord.com/api/v10/channels/1435305016750772415/messages/1467581927749062770/reactions/%E2%9C%85/@me responded with 429. Retrying in 0.30 seconds.
+2026-02-02 02:07:06,165 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 02:07:46,829 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 02:09:30,043 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 02:09:30,052 [INFO] logging in using static token
+2026-02-02 02:09:30,090 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-02 02:09:30,091 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-02 02:09:32,089 [INFO] Shard ID None has connected to Gateway (Session ID: 384cc47fe510f4fa3886774541d787fc).
+2026-02-02 02:09:34,191 [INFO] Logged in as Registrarbot
+2026-02-02 02:09:34,192 [INFO] Bot is ready to auto-nickname users!
+2026-02-02 02:10:08,466 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 02:10:21,832 [INFO] Command-like message received from calv.xmv: !removepresent <@836128654983168002>
+2026-02-02 02:13:21,256 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 02:13:21,265 [INFO] logging in using static token
+2026-02-02 02:13:21,308 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-02 02:13:21,309 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-02 02:13:23,276 [INFO] Shard ID None has connected to Gateway (Session ID: 4f1cc9ad4cde03c8b653e8fd9d245da7).
+2026-02-02 02:13:25,320 [INFO] Logged in as Registrarbot
+2026-02-02 02:13:25,321 [INFO] Bot is ready to auto-nickname users!
+2026-02-02 02:14:03,295 [INFO] Command-like message received from calv.xmv: !present <@926757288230944800>
+2026-02-02 02:14:09,649 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 02:14:21,465 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 02:18:14,870 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 02:18:14,880 [INFO] logging in using static token
+2026-02-02 02:18:14,937 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-02 02:18:14,938 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-02 02:18:16,947 [INFO] Shard ID None has connected to Gateway (Session ID: 751860b7f4eae9f4e87e4ec430fb642a).
+2026-02-02 02:18:19,002 [INFO] Logged in as Registrarbot
+2026-02-02 02:18:19,002 [INFO] Bot is ready to auto-nickname users!
+2026-02-02 02:27:24,897 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 02:27:24,905 [INFO] logging in using static token
+2026-02-02 02:27:24,942 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-02 02:27:24,943 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-02 02:27:26,985 [INFO] Shard ID None has connected to Gateway (Session ID: b4fe4bff11d8484b994d98363e660042).
+2026-02-02 02:27:29,059 [INFO] Logged in as Registrarbot
+2026-02-02 02:27:29,060 [INFO] Bot is ready to auto-nickname users!
+2026-02-02 02:28:17,606 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 02:33:31,934 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 02:33:31,943 [INFO] logging in using static token
+2026-02-02 02:33:31,976 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-02 02:33:31,976 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-02 02:33:33,892 [INFO] Shard ID None has connected to Gateway (Session ID: 7fbc06a15f1505d3399318884b9e896c).
+2026-02-02 02:33:35,923 [INFO] Logged in as Registrarbot
+2026-02-02 02:33:35,924 [INFO] Bot is ready to auto-nickname users!
+2026-02-02 02:38:43,485 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 02:38:43,492 [INFO] logging in using static token
+2026-02-02 02:38:43,535 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-02 02:38:43,535 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-02 02:38:46,013 [INFO] Shard ID None has connected to Gateway (Session ID: 9ffc87a0195ff3d5de4c85ef298dc9c3).
+2026-02-02 02:38:48,115 [INFO] Logged in as Registrarbot
+2026-02-02 02:38:48,115 [INFO] Bot is ready to auto-nickname users!
+2026-02-02 02:43:51,968 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 02:43:51,977 [INFO] logging in using static token
+2026-02-02 02:43:52,022 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-02 02:43:52,023 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-02 02:43:54,053 [INFO] Shard ID None has connected to Gateway (Session ID: 3faeffc029cc4d774b87c937a4633af9).
+2026-02-02 02:43:56,108 [INFO] Logged in as Registrarbot
+2026-02-02 02:43:56,108 [INFO] Bot is ready to auto-nickname users!
+2026-02-02 02:45:18,758 [INFO] Generating report for guild: ONEMSU (1434956894262399108)
+2026-02-02 02:51:00,621 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 02:51:00,632 [INFO] logging in using static token
+2026-02-02 02:51:00,708 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-02 02:51:00,709 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-02 02:51:02,688 [INFO] Shard ID None has connected to Gateway (Session ID: ad3c2df5c383e1f7939c894e98c7ac78).
+2026-02-02 02:51:04,762 [INFO] Logged in as Registrarbot
+2026-02-02 02:51:04,762 [INFO] Bot is ready to auto-nickname users!
+2026-02-02 02:51:04,773 [INFO] Database initialized.
+2026-02-02 03:24:26,384 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 03:24:26,399 [INFO] logging in using static token
+2026-02-02 03:24:26,502 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-02 03:24:26,503 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-02 03:24:28,290 [INFO] Shard ID None has connected to Gateway (Session ID: b6755a25cd47ef48d0bd94404c4f83ad).
+2026-02-02 03:24:30,470 [INFO] Logged in as Registrarbot
+2026-02-02 03:24:30,470 [INFO] Bot is ready to auto-nickname users!
+2026-02-02 03:24:30,489 [INFO] Database initialized.
+2026-02-02 03:26:30,862 [INFO] Command-like message received from calv.xmv: !resetattendance
+2026-02-02 03:26:51,257 [INFO] Command-like message received from calv.xmv: !settime 6am to 7am
+2026-02-02 03:26:51,290 [INFO] Command execution started: settime with input '6am to 7am'
+2026-02-02 03:26:51,291 [INFO] Processing time input: '6am to 7am'
+2026-02-02 03:26:51,353 [INFO] Successfully saved settings: 06:00 - 07:00
+2026-02-02 03:26:59,681 [INFO] Command-like message received from calv.xmv: !setpermitrole <@&1465961501423566890>
+2026-02-02 03:27:11,227 [INFO] Command-like message received from calv.xmv: !presentrole <@&1466714255557398623>
+2026-02-02 03:27:17,740 [INFO] Command-like message received from calv.xmv: !absentrole <@&1466715932054388756>
+2026-02-02 03:27:24,423 [INFO] Command-like message received from calv.xmv: !excuserole <@&1466715978258976770>
+2026-02-02 03:27:30,514 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-01)
+2026-02-02 03:27:30,515 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-02 03:27:30,518 [INFO] Generating report for guild: TEST BOT (1465954498336919647)
+2026-02-02 03:27:30,913 [INFO] Attendance reset complete for TEST BOT
+2026-02-02 03:28:46,480 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 03:28:46,487 [INFO] logging in using static token
+2026-02-02 03:28:46,518 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-02 03:28:46,519 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-02 03:28:48,570 [INFO] Shard ID None has connected to Gateway (Session ID: 3132ea5dcfe9dddc12807d65572c362b).
+2026-02-02 03:28:50,612 [INFO] Logged in as Registrarbot
+2026-02-02 03:28:50,613 [INFO] Bot is ready to auto-nickname users!
+2026-02-02 03:28:50,631 [INFO] Database initialized.
+2026-02-02 03:28:50,640 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-01)
+2026-02-02 03:28:50,640 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-02 03:28:50,645 [INFO] Generating report for guild: TEST BOT (1465954498336919647)
+2026-02-02 03:28:51,059 [INFO] Attendance reset complete for TEST BOT
+2026-02-02 03:29:50,650 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-01)
+2026-02-02 03:29:50,651 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-02 03:29:50,654 [INFO] Generating report for guild: TEST BOT (1465954498336919647)
+2026-02-02 03:29:51,197 [INFO] Attendance reset complete for TEST BOT
+2026-02-02 03:30:50,660 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-01)
+2026-02-02 03:30:50,670 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-02 03:30:50,682 [INFO] Generating report for guild: TEST BOT (1465954498336919647)
+2026-02-02 03:31:11,181 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 03:31:11,189 [INFO] logging in using static token
+2026-02-02 03:31:11,228 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-02 03:31:11,230 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-02 03:32:57,026 [INFO] Shard ID None session has been invalidated.
+2026-02-02 03:33:05,005 [INFO] Shard ID None has connected to Gateway (Session ID: 35845ef066e3b52cd7c8dd586f3ccf25).
+2026-02-02 03:33:05,164 [INFO] Command-like message received from calv.xmv: !presentrole <@&1466714255557398623>
+2026-02-02 03:33:07,125 [INFO] Logged in as Registrarbot
+2026-02-02 03:33:07,126 [INFO] Bot is ready to auto-nickname users!
+2026-02-02 03:33:07,128 [INFO] Database initialized.
+2026-02-02 03:33:07,177 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-01)
+2026-02-02 03:33:07,178 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-02 03:33:07,185 [INFO] Generating report for guild: TEST BOT (1465954498336919647)
+2026-02-02 03:33:07,605 [INFO] Attendance reset complete for TEST BOT
+2026-02-02 03:33:22,312 [INFO] Command-like message received from calv.xmv: !settime 4am to 5am
+2026-02-02 03:33:22,322 [INFO] Command execution started: settime with input '4am to 5am'
+2026-02-02 03:33:22,322 [INFO] Processing time input: '4am to 5am'
+2026-02-02 03:33:22,330 [INFO] Successfully saved settings: 04:00 - 05:00
+2026-02-02 03:33:22,950 [WARNING] We are being rate limited. POST https://discord.com/api/v10/channels/1465954498961739798/messages responded with 429. Retrying in 0.50 seconds.
+2026-02-02 03:33:23,737 [WARNING] We are being rate limited. POST https://discord.com/api/v10/channels/1465954498961739798/messages responded with 429. Retrying in 0.71 seconds.
+2026-02-02 03:33:29,431 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 03:33:29,434 [INFO] Generating report for guild: TEST BOT (1465954498336919647)
+2026-02-02 03:33:35,944 [INFO] Command-like message received from calv.xmv: !resetattendance
+2026-02-02 03:38:44,540 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 03:38:44,550 [INFO] logging in using static token
+2026-02-02 03:38:44,604 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-02 03:38:44,605 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-02 03:38:46,448 [INFO] Shard ID None has connected to Gateway (Session ID: 3f3491cb9273b4ff97125d5f4afa90e3).
+2026-02-02 03:38:48,551 [INFO] Logged in as Registrarbot
+2026-02-02 03:38:48,552 [INFO] Bot is ready to auto-nickname users!
+2026-02-02 03:38:48,564 [INFO] Database initialized.
+2026-02-02 03:38:48,572 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-01)
+2026-02-02 03:38:48,572 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-02 03:38:49,326 [INFO] Generating report for guild: TEST BOT (1465954498336919647)
+2026-02-02 03:38:49,890 [INFO] Attendance reset complete for TEST BOT
+2026-02-02 03:44:00,777 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-02 03:44:00,786 [INFO] logging in using static token
+2026-02-02 03:44:00,825 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-02 03:44:00,825 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-02 03:44:02,980 [INFO] Shard ID None has connected to Gateway (Session ID: 81a7c1460788a267227c180c2a8b29e0).
+2026-02-02 03:44:05,078 [INFO] Logged in as Registrarbot
+2026-02-02 03:44:05,079 [INFO] Bot is ready to auto-nickname users!
+2026-02-02 03:44:05,097 [INFO] Database initialized.
+2026-02-02 03:44:05,106 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-01)
+2026-02-02 03:44:05,106 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-02 03:44:05,452 [INFO] Generating report for guild: TEST BOT (1465954498336919647)
+2026-02-02 03:44:06,521 [INFO] 127.0.0.1 - - [02/Feb/2026 03:44:06] "GET /?ide_webview_request_time=1769975046085 HTTP/1.1" 200 -
+2026-02-02 03:44:06,776 [INFO] 127.0.0.1 - - [02/Feb/2026 03:44:06] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2026-02-02 03:44:06,905 [INFO] Attendance reset complete for TEST BOT
+2026-02-02 03:44:24,527 [INFO] Command-like message received from calv.xmv: !present
+2026-02-02 03:44:29,282 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-02 03:44:29,680 [INFO] Generating report for guild: TEST BOT (1465954498336919647)
+2026-02-03 01:47:58,081 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-03 01:47:58,090 [INFO] logging in using static token
+2026-02-03 01:47:58,147 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-03 01:47:58,148 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-03 01:47:59,977 [INFO] Shard ID None has connected to Gateway (Session ID: 7e7427c260e51afd287c6bb691ac4e18).
+2026-02-03 01:48:02,093 [INFO] Logged in as Registrarbot
+2026-02-03 01:48:02,094 [INFO] Bot is ready to auto-nickname users!
+2026-02-03 01:48:02,111 [INFO] Database initialized.
+2026-02-03 01:48:03,180 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-02)
+2026-02-03 01:48:03,181 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-03 01:48:03,200 [INFO] Attendance reset complete for TEST BOT
+2026-02-03 01:48:08,660 [INFO] 127.0.0.1 - - [03/Feb/2026 01:48:08] "GET /?ide_webview_request_time=1770054486994 HTTP/1.1" 200 -
+2026-02-03 01:48:08,866 [INFO] 127.0.0.1 - - [03/Feb/2026 01:48:08] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2026-02-03 01:49:02,125 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-02)
+2026-02-03 01:49:02,126 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-03 01:49:02,164 [INFO] Attendance reset complete for TEST BOT
+2026-02-03 01:50:02,126 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-02)
+2026-02-03 01:50:02,126 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-03 01:50:02,143 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:30:23,901 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-08 02:30:23,914 [INFO] logging in using static token
+2026-02-08 02:30:24,031 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-08 02:30:24,031 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-08 02:30:26,864 [INFO] Shard ID None has connected to Gateway (Session ID: 39bc52d7f06112736fa1c49210cf4749).
+2026-02-08 02:30:28,948 [INFO] Logged in as Registrarbot
+2026-02-08 02:30:28,949 [INFO] Bot is ready to auto-nickname users!
+2026-02-08 02:30:29,230 [INFO] Database initialized.
+2026-02-08 02:30:29,287 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:30:29,288 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:30:29,324 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:31:29,512 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:31:29,529 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:31:29,585 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:31:57,804 [INFO] Command-like message received from calv.xmv: !excuse <@836128654983168002>
+2026-02-08 02:32:13,343 [INFO] Command-like message received from calv.xmv: !excuserole <@414415071826018305>
+2026-02-08 02:32:29,256 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:32:29,257 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:32:29,317 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:32:29,976 [INFO] Command-like message received from calv.xmv: !excuserole <@&1466715978258976770>
+2026-02-08 02:32:39,384 [INFO] Command-like message received from calv.xmv: !excuse <@836128654983168002>
+2026-02-08 02:32:48,227 [INFO] Command-like message received from calv.xmv: !excuse <@836128654983168002> nalibang
+2026-02-08 02:33:09,000 [INFO] Command-like message received from calv.xmv: !absent <@836128654983168002>
+2026-02-08 02:33:15,859 [INFO] Command-like message received from calv.xmv: !absentrole <@&1466749889277988946>
+2026-02-08 02:33:21,624 [INFO] Command-like message received from calv.xmv: !absent <@836128654983168002>
+2026-02-08 02:33:29,258 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:33:29,259 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:33:29,330 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:33:52,441 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-08 02:33:52,505 [INFO] Generating report for guild: ONEMSU (1434956894262399108)
+2026-02-08 02:34:29,300 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-08 02:34:29,316 [INFO] logging in using static token
+2026-02-08 02:34:29,406 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-08 02:34:29,407 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-08 02:34:31,069 [INFO] Shard ID None has connected to Gateway (Session ID: 2c9fb6ebbc4c18d363d820a6cd48b957).
+2026-02-08 02:34:33,203 [INFO] Logged in as Registrarbot
+2026-02-08 02:34:33,204 [INFO] Bot is ready to auto-nickname users!
+2026-02-08 02:34:33,228 [INFO] Database initialized.
+2026-02-08 02:34:33,241 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:34:33,241 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:34:33,289 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:35:33,319 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:35:33,333 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:35:33,380 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:35:59,930 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-08 02:35:59,979 [INFO] Generating report for guild: ONEMSU (1434956894262399108)
+2026-02-08 02:36:33,263 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:36:33,274 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:36:33,350 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:36:45,917 [INFO] Command-like message received from calv.xmv: !absent <@836128654983168002>
+2026-02-08 02:37:33,300 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:37:33,307 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:37:33,391 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:38:33,244 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:38:33,252 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:38:33,286 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:39:03,167 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-08 02:39:03,179 [INFO] logging in using static token
+2026-02-08 02:39:03,251 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-08 02:39:03,251 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-08 02:39:05,169 [INFO] Shard ID None has connected to Gateway (Session ID: 1dd0dfebb8f4d105ffb816980f6aa216).
+2026-02-08 02:39:07,273 [INFO] Logged in as Registrarbot
+2026-02-08 02:39:07,274 [INFO] Bot is ready to auto-nickname users!
+2026-02-08 02:39:07,298 [INFO] Database initialized.
+2026-02-08 02:39:07,310 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:39:07,312 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:39:07,352 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:39:57,922 [INFO] Command-like message received from calv.xmv: !absent <@836128654983168002>
+2026-02-08 02:40:07,323 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:40:07,325 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:40:07,404 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:41:07,443 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:41:07,455 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:41:07,503 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:42:07,358 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:42:07,362 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:42:07,409 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:43:07,431 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:43:07,458 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:43:07,519 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:44:07,315 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:44:07,316 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:44:07,371 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:45:07,317 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:45:07,318 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:45:07,363 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:46:07,311 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:46:07,312 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:46:07,778 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:47:07,319 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:47:07,320 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:47:07,363 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:48:07,360 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:48:07,379 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:48:07,447 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:49:07,322 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:49:07,322 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:49:07,363 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:50:07,315 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:50:07,315 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:50:07,354 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:51:07,312 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:51:07,314 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:51:07,357 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:52:07,316 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:52:07,331 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:52:07,373 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:53:07,322 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:53:07,322 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:53:07,378 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:54:07,309 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:54:07,310 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:54:07,351 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:55:07,315 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:55:07,316 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:55:07,360 [INFO] Attendance reset complete for TEST BOT
+2026-02-08 02:56:07,321 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-07)
+2026-02-08 02:56:07,323 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-08 02:56:07,363 [INFO] Attendance reset complete for TEST BOT
+2026-02-09 02:11:23,343 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-09 02:11:23,357 [INFO] logging in using static token
+2026-02-09 02:11:23,652 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-09 02:11:23,653 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-09 02:11:26,289 [INFO] Shard ID None has connected to Gateway (Session ID: fa07bfab65d2342d11f4bc06d8c2c255).
+2026-02-09 02:11:28,527 [INFO] Logged in as Registrarbot
+2026-02-09 02:11:28,528 [INFO] Bot is ready to auto-nickname users!
+2026-02-09 02:11:28,548 [INFO] Database initialized.
+2026-02-09 02:11:28,587 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-08)
+2026-02-09 02:11:28,588 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-09 02:11:28,630 [INFO] Attendance reset complete for TEST BOT
+2026-02-09 02:11:29,896 [INFO] Command-like message received from calv.xmv: !settings
+2026-02-09 02:11:52,045 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-09 02:11:52,051 [INFO] logging in using static token
+2026-02-09 02:11:52,113 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-09 02:11:52,113 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-09 02:11:53,803 [INFO] Shard ID None has connected to Gateway (Session ID: a3af84e8cda2402585ecd922923e21e7).
+2026-02-09 02:11:55,858 [INFO] Logged in as Registrarbot
+2026-02-09 02:11:55,858 [INFO] Bot is ready to auto-nickname users!
+2026-02-09 02:11:55,878 [INFO] Database initialized.
+2026-02-09 02:11:55,896 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-08)
+2026-02-09 02:11:55,897 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-09 02:11:55,943 [INFO] Attendance reset complete for TEST BOT
+2026-02-09 02:11:57,069 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-09 02:11:57,072 [INFO] Generating report for guild: ONEMSU (1434956894262399108)
+2026-02-09 02:18:36,623 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-09 02:18:36,636 [INFO] logging in using static token
+2026-02-09 02:18:36,717 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.7:8080
+2026-02-09 02:18:36,717 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-09 02:18:38,620 [INFO] Shard ID None has connected to Gateway (Session ID: 4b782e60426c69db619aee39fab14f1f).
+2026-02-09 02:18:40,663 [INFO] Logged in as Registrarbot
+2026-02-09 02:18:40,663 [INFO] Bot is ready to auto-nickname users!
+2026-02-09 02:18:40,689 [INFO] Database initialized.
+2026-02-09 02:18:40,704 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-08)
+2026-02-09 02:18:40,704 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-09 02:18:40,750 [INFO] Attendance reset complete for TEST BOT
+2026-02-09 02:18:48,325 [INFO] Command-like message received from calv.xmv: !settings
+2026-02-21 02:18:15,554 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-21 02:18:15,607 [INFO] logging in using static token
+2026-02-21 02:18:15,800 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.10:8080
+2026-02-21 02:18:15,801 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-21 02:18:17,478 [INFO] Shard ID None has connected to Gateway (Session ID: df5dc7c4bdf5294acb652efa23948c8e).
+2026-02-21 02:18:19,553 [INFO] Logged in as Registrarbot
+2026-02-21 02:18:19,553 [INFO] Bot is ready to auto-nickname users!
+2026-02-21 02:18:19,715 [INFO] Database initialized.
+2026-02-21 02:18:19,723 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:18:20,582 [INFO] Command-like message received from calv.xmv: !stick Please read the rules before chatting.!
+2026-02-21 02:18:21,278 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:18:21,374 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-20)
+2026-02-21 02:18:21,375 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-21 02:18:21,643 [INFO] Attendance reset complete for TEST BOT
+2026-02-21 02:18:38,923 [INFO] Command-like message received from calv.xmv: !removestick
+2026-02-21 02:18:49,556 [INFO] Command-like message received from calv.xmv: !stick Please read the rules before chatting.
+2026-02-21 02:19:19,806 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:19:19,811 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:20:19,841 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:20:19,859 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:20:47,575 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-21 02:20:47,625 [INFO] Generating report for guild: ONEMSU (1434956894262399108)
+2026-02-21 02:21:09,472 [INFO] Command-like message received from calv.xmv: !present
+2026-02-21 02:21:19,735 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:21:19,740 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:21:28,950 [INFO] Command-like message received from calv.xmv: !stick test
+2026-02-21 02:22:19,733 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:22:19,735 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:23:03,122 [INFO] Command-like message received from calv.xmv: !giveoffense <@836128654983168002>  test
+2026-02-21 02:23:15,785 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-21 02:23:15,797 [INFO] logging in using static token
+2026-02-21 02:23:15,938 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.10:8080
+2026-02-21 02:23:15,939 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-21 02:23:19,648 [INFO] Shard ID None has connected to Gateway (Session ID: a11e96e35fbfb8a90134394afe1e958b).
+2026-02-21 02:23:21,727 [INFO] Logged in as Registrarbot
+2026-02-21 02:23:21,728 [INFO] Bot is ready to auto-nickname users!
+2026-02-21 02:23:21,779 [INFO] Database initialized.
+2026-02-21 02:23:21,799 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:23:21,802 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:23:21,810 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-20)
+2026-02-21 02:23:21,810 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-21 02:23:21,968 [INFO] Attendance reset complete for TEST BOT
+2026-02-21 02:24:21,847 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:24:21,856 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:25:21,829 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:25:21,840 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:26:21,812 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:26:21,822 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:27:21,798 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:27:21,812 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:28:30,231 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-21 02:28:30,249 [INFO] logging in using static token
+2026-02-21 02:28:30,360 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.10:8080
+2026-02-21 02:28:30,361 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-21 02:28:32,277 [INFO] Shard ID None has connected to Gateway (Session ID: 0c30baa2e6e7960148ec01e1660e769d).
+2026-02-21 02:28:34,345 [INFO] Logged in as Registrarbot
+2026-02-21 02:28:34,346 [INFO] Bot is ready to auto-nickname users!
+2026-02-21 02:28:34,400 [INFO] Database initialized.
+2026-02-21 02:28:34,434 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:28:34,437 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:28:34,449 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-20)
+2026-02-21 02:28:34,449 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-21 02:28:34,669 [INFO] Attendance reset complete for TEST BOT
+2026-02-21 02:29:34,433 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:29:34,436 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:30:29,606 [INFO] Command-like message received from calv.xmv: !leaderboard
+2026-02-21 02:30:29,699 [ERROR] Command error in attendance_leaderboard: Command raised an exception: OperationalError: no such column: absent_count
+NoneType: None
+2026-02-21 02:30:34,414 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:30:34,417 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:30:56,782 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-21 02:30:56,800 [INFO] logging in using static token
+2026-02-21 02:30:56,876 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.10:8080
+2026-02-21 02:30:56,877 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-21 02:30:58,776 [INFO] Shard ID None has connected to Gateway (Session ID: 3883794cd0467ec7c67a4d9eaab6b9fd).
+2026-02-21 02:31:00,836 [INFO] Logged in as Registrarbot
+2026-02-21 02:31:00,836 [INFO] Bot is ready to auto-nickname users!
+2026-02-21 02:31:00,853 [INFO] Database initialized.
+2026-02-21 02:31:00,856 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:31:00,858 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:31:00,868 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-20)
+2026-02-21 02:31:00,868 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-21 02:31:01,057 [INFO] Attendance reset complete for TEST BOT
+2026-02-21 02:31:23,148 [INFO] Command-like message received from calv.xmv: !leaderboard
+2026-02-21 02:31:23,165 [ERROR] Command error in attendance_leaderboard: Command raised an exception: OperationalError: no such column: absent_count
+NoneType: None
+2026-02-21 02:31:47,867 [INFO] Command-like message received from calv.xmv: !leaderboard
+2026-02-21 02:31:47,871 [ERROR] Command error in attendance_leaderboard: Command raised an exception: OperationalError: no such column: absent_count
+NoneType: None
+2026-02-21 02:32:00,859 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:32:00,861 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:32:25,917 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-21 02:32:25,932 [INFO] logging in using static token
+2026-02-21 02:32:26,042 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.10:8080
+2026-02-21 02:32:26,043 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-21 02:32:27,886 [INFO] Shard ID None has connected to Gateway (Session ID: cad7e50bf846a7158ba8286da1950079).
+2026-02-21 02:32:29,964 [INFO] Logged in as Registrarbot
+2026-02-21 02:32:29,964 [INFO] Bot is ready to auto-nickname users!
+2026-02-21 02:32:30,186 [INFO] Database initialized.
+2026-02-21 02:32:30,205 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:32:30,206 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:32:30,213 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-20)
+2026-02-21 02:32:30,213 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-21 02:32:30,533 [INFO] Attendance reset complete for TEST BOT
+2026-02-21 02:33:30,237 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:33:30,244 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:33:38,409 [INFO] Command-like message received from calv.xmv: !leaderboard
+2026-02-21 02:34:30,576 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:34:30,650 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:35:16,351 [INFO] Command-like message received from calv.xmv: ! leaderboard
+2026-02-21 02:35:24,806 [INFO] Command-like message received from calv.xmv: !leaderboard
+2026-02-21 02:35:30,208 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:35:30,211 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:36:01,990 [INFO] Command-like message received from calv.xmv: !leaderboard
+2026-02-21 02:36:30,223 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:36:30,229 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:36:33,700 [INFO] Command-like message received from calv.xmv: !leaderboard
+2026-02-21 02:36:57,818 [INFO] Command-like message received from calv.xmv: !attendance_leaderboard
+2026-02-21 02:37:16,693 [INFO] Command-like message received from calv.xmv: !leaderboard
+2026-02-21 02:37:23,306 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-21 02:37:23,321 [INFO] Generating report for guild: ONEMSU (1434956894262399108)
+2026-02-21 02:37:29,760 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-21 02:37:29,762 [INFO] Generating report for guild: ONEMSU (1434956894262399108)
+2026-02-21 02:37:30,193 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:37:30,195 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:38:30,206 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:38:30,208 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:39:19,056 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-21 02:39:19,087 [INFO] Generating report for guild: CSU | CARAGA STATE (1465046611842306384)
+2026-02-21 02:39:38,661 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-21 02:39:38,673 [INFO] logging in using static token
+2026-02-21 02:39:38,759 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.10:8080
+2026-02-21 02:39:38,759 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-21 02:39:40,589 [INFO] Shard ID None has connected to Gateway (Session ID: 2def9cecc18fc478df8b57d786e7b75c).
+2026-02-21 02:39:42,659 [INFO] Logged in as Registrarbot
+2026-02-21 02:39:42,659 [INFO] Bot is ready to auto-nickname users!
+2026-02-21 02:39:42,716 [INFO] Database initialized.
+2026-02-21 02:39:42,738 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:39:42,739 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:39:42,747 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-20)
+2026-02-21 02:39:42,749 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-21 02:39:42,926 [INFO] Attendance reset complete for TEST BOT
+2026-02-21 02:39:44,210 [INFO] Command-like message received from calv.xmv: !stick test
+2026-02-21 02:40:42,798 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:40:42,817 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:41:03,952 [INFO] Command-like message received from calv.xmv: !leaderboard
+2026-02-21 02:41:18,361 [INFO] Command-like message received from calv.xmv: !leaderboard
+2026-02-21 02:41:42,746 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:41:42,749 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:42:25,442 [INFO] Command-like message received from calv.xmv: !stick test
+2026-02-21 02:42:42,726 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:42:42,728 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:43:11,722 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-21 02:43:11,739 [INFO] logging in using static token
+2026-02-21 02:43:11,835 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.10:8080
+2026-02-21 02:43:11,836 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-21 02:43:13,480 [INFO] Shard ID None has connected to Gateway (Session ID: c1cc3e1184af5ffbdf63383fa413a73d).
+2026-02-21 02:43:15,547 [INFO] Logged in as Registrarbot
+2026-02-21 02:43:15,547 [INFO] Bot is ready to auto-nickname users!
+2026-02-21 02:43:15,565 [INFO] Database initialized.
+2026-02-21 02:43:15,570 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:43:15,573 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:43:15,584 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-20)
+2026-02-21 02:43:15,584 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-21 02:43:15,823 [INFO] Attendance reset complete for TEST BOT
+2026-02-21 02:43:35,307 [INFO] Command-like message received from calv.xmv: !leaderboard
+2026-02-21 02:44:15,596 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:44:15,600 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:44:26,735 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-21 02:44:26,816 [INFO] Generating report for guild: ONEMSU (1434956894262399108)
+2026-02-21 02:45:15,573 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:45:15,575 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:45:22,338 [INFO] Command-like message received from calv.xmv: !leaderboard
+2026-02-21 02:45:38,870 [INFO] Command-like message received from calv.xmv: !leaderboard
+2026-02-21 02:46:15,606 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:46:15,610 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:47:15,586 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:47:15,589 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:48:10,359 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-21 02:48:10,372 [INFO] Generating report for guild: ONEMSU (1434956894262399108)
+2026-02-21 02:48:15,583 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:48:15,586 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:49:15,574 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:49:15,577 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:50:15,583 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:50:15,589 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:51:15,586 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:51:15,593 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:52:15,638 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:52:15,641 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:52:53,101 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-21 02:52:53,129 [INFO] Generating report for guild: CSU | CARAGA STATE (1465046611842306384)
+2026-02-21 02:53:05,434 [INFO] Command-like message received from calv.xmv: !leaderboard
+2026-02-21 02:53:15,576 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:53:15,578 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:53:16,593 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-21 02:53:16,596 [INFO] Generating report for guild: ONEMSU (1434956894262399108)
+2026-02-21 02:53:23,995 [INFO] Command-like message received from calv.xmv: !leaderboard
+2026-02-21 02:54:11,329 [INFO] Command-like message received from calv.xmv: !stick test
+2026-02-21 02:54:15,575 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:54:15,878 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:55:15,580 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:55:15,582 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:56:15,635 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:56:15,644 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:57:15,583 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:57:15,587 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:57:20,539 [INFO] Command-like message received from calv.xmv: !removepresent <@836128654983168002>
+2026-02-21 02:58:15,578 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:58:15,580 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:58:15,806 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-21 02:58:15,809 [INFO] Generating report for guild: ONEMSU (1434956894262399108)
+2026-02-21 02:58:27,187 [INFO] Command-like message received from calv.xmv: !leaderboard
+2026-02-21 02:59:15,620 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 02:59:15,626 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:00:15,590 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:00:15,596 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:01:15,708 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:01:15,742 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:02:15,590 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:02:15,595 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:03:15,577 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:03:15,579 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:03:41,310 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-21 03:03:41,329 [INFO] Generating report for guild: ONEMSU (1434956894262399108)
+2026-02-21 03:03:52,697 [INFO] Command-like message received from calv.xmv: !leaderboard
+2026-02-21 03:04:15,581 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:04:15,582 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:05:15,575 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:05:15,578 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:06:15,584 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:06:15,591 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:07:15,661 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:07:15,687 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:07:30,061 [INFO] Command-like message received from calv.xmv: !leaderboard
+2026-02-21 03:08:15,588 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:08:15,591 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:08:59,153 [INFO] Command-like message received from calv.xmv: !assignchannel <#1435305016750772415>
+2026-02-21 03:08:59,813 [INFO] Report channel set to 🔒・config (1435305016750772415) for guild 1434956894262399108
+2026-02-21 03:09:10,368 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-21 03:09:10,375 [INFO] Generating report for guild: ONEMSU (1434956894262399108)
+2026-02-21 03:09:15,579 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:09:15,580 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:10:15,576 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:10:15,579 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:11:15,588 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:11:15,590 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:12:15,586 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:12:15,589 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:13:05,258 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-21 03:13:05,360 [INFO] Generating report for guild: ONEMSU (1434956894262399108)
+2026-02-21 03:13:15,570 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:13:15,572 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:13:38,196 [INFO] Command-like message received from calv.xmv: !leaderboard
+2026-02-21 03:14:13,744 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-21 03:14:13,749 [INFO] Generating report for guild: CSU | CARAGA STATE (1465046611842306384)
+2026-02-21 03:14:15,585 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:14:15,586 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:14:23,609 [INFO] Command-like message received from calv.xmv: !leadeboard
+2026-02-21 03:14:39,390 [INFO] Command-like message received from calv.xmv: !stick
+2026-02-21 03:15:11,438 [INFO] Command-like message received from calv.xmv: !leaderboard
+2026-02-21 03:15:15,584 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:15:15,587 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:16:15,661 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:16:15,676 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:17:03,889 [INFO] Command-like message received from calv.xmv: !resetattendance
+2026-02-21 03:17:15,585 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:17:15,591 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:17:18,438 [INFO] Generating report for guild: ONEMSU (1434956894262399108)
+2026-02-21 03:18:15,584 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:18:15,588 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:19:10,171 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-02-21 03:19:10,203 [INFO] logging in using static token
+2026-02-21 03:19:10,416 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.10:8080
+2026-02-21 03:19:10,419 [INFO] [33mPress CTRL+C to quit[0m
+2026-02-21 03:19:12,255 [INFO] Shard ID None has connected to Gateway (Session ID: d800b0b475af4c267e1e5f5cf86a128b).
+2026-02-21 03:19:14,333 [INFO] Logged in as Registrarbot
+2026-02-21 03:19:14,333 [INFO] Bot is ready to auto-nickname users!
+2026-02-21 03:19:14,382 [INFO] Database initialized.
+2026-02-21 03:19:14,402 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:19:14,405 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:19:14,416 [INFO] Triggering End-of-Day for TEST BOT (Date: 2026-02-20)
+2026-02-21 03:19:14,425 [WARNING] Cannot auto-mark absences for TEST BOT: No 'allowed_role' configured.
+2026-02-21 03:19:15,009 [INFO] Attendance reset complete for TEST BOT
+2026-02-21 03:19:29,930 [INFO] Command-like message received from calv.xmv: !attendance
+2026-02-21 03:19:29,932 [INFO] Generating report for guild: ONEMSU (1434956894262399108)
+2026-02-21 03:19:56,466 [INFO] Command-like message received from calv.xmv: !stick try
+2026-02-21 03:20:12,400 [INFO] Command-like message received from calv.xmv: !leaderboard
+2026-02-21 03:20:14,411 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:20:14,415 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:21:14,435 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:21:14,438 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:22:14,446 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:22:14,455 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:23:14,399 [ERROR] Error in check_attendance_expiry loop for guild 1434956894262399108: cannot access local variable 'start_str' where it is not associated with a value
+2026-02-21 03:23:14,405 [ERROR] Error in check_attendance_expiry loop for guild 1465046611842306384: cannot access local variable 'start_str' where it is not associated with a value
+2026-03-18 15:27:07,849 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-03-18 15:27:07,849 [WARNING] davey is not installed, voice will NOT be supported
+2026-03-18 15:27:07,852 [WARNING] DISCORD_TOKEN is not set. The healthcheck server will stay online, but the Discord bot will not connect until the environment variable is configured.
+2026-03-18 15:27:07,864 [INFO] Serving on http://0.0.0.0:8080
+2026-04-22 18:50:11,487 [WARNING] DISCORD_TOKEN is not set. The healthcheck server will stay online, but the Discord bot will not connect until the environment variable is configured.
+2026-04-22 18:53:18,310 [INFO] logging in using static token
+2026-04-22 18:53:20,674 [INFO] Shard ID None has connected to Gateway (Session ID: 1cac44489b4852e666f9824b266d321f).
+2026-04-22 18:53:25,119 [INFO] Logged in as Dragon
+2026-04-22 18:53:25,120 [INFO] Bot is ready to auto-nickname users!
+2026-04-22 18:53:30,583 [INFO] Database initialized at data\attendance.db (snapshot: data\attendance_snapshot.json).
+2026-04-22 18:53:32,982 [INFO] Synced 87 application commands.
+2026-04-22 18:53:33,410 [INFO] Synced 0 commands for guild REVAMP| In progress (836311422484086785).
+2026-04-22 18:53:33,875 [INFO] Synced 0 commands for guild KORNBEP (888670175329652787).
+2026-04-22 18:53:34,231 [INFO] Synced 0 commands for guild 𝘖𝘕𝘌𝘔𝘚𝘜 (1434956894262399108).
+2026-04-22 18:53:34,607 [INFO] Synced 0 commands for guild NΞXORA VIDΞS (1438872036460990537).
+2026-04-22 18:53:35,029 [INFO] Synced 0 commands for guild ✧･ﾟ: Aurielle 🌸:･ﾟ✧ (1491202119527694408).
+2026-04-22 18:53:35,403 [INFO] Synced 0 commands for guild BOT TESTING (1495816118521040946).
+2026-04-22 18:53:35,404 [INFO] Loaded 0 sticky channel configuration(s) from data\sticky_channels.json
+2026-04-22 18:53:36,640 [INFO] Autonick startup reconcile for guild 836311422484086785: updated=0 skipped=252
+2026-04-22 18:53:48,647 [INFO] Autonick startup reconcile for guild 888670175329652787: updated=0 skipped=3074
+2026-04-22 18:53:52,505 [INFO] Autonick startup reconcile for guild 1434956894262399108: updated=0 skipped=878
+2026-04-22 18:53:53,594 [INFO] Autonick startup reconcile for guild 1438872036460990537: updated=0 skipped=161
+2026-04-22 18:53:54,250 [INFO] Autonick startup reconcile for guild 1491202119527694408: updated=0 skipped=61
+2026-04-22 18:53:54,665 [INFO] Autonick startup reconcile for guild 1495816118521040946: updated=0 skipped=6
+2026-04-22 18:53:57,253 [INFO] Connecting to voice...
+2026-04-22 18:53:57,253 [INFO] Starting voice handshake... (connection attempt 1)
+2026-04-22 18:53:58,227 [INFO] Voice handshake complete. Endpoint found: c-hkg08-a1e98adf.discord.media:8443
+2026-04-22 18:53:58,926 [ERROR] Failed to connect to voice... Retrying in 1.0s...
+Traceback (most recent call last):
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\voice_state.py", line 413, in _inner_connect
+    await self._handshake_websocket()
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\voice_state.py", line 586, in _handshake_websocket
+    await self.ws.poll_event()
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\gateway.py", line 1053, in poll_event
+    raise ConnectionClosed(self.ws, shard_id=None, code=self._close_code)
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 4017
+2026-04-22 18:53:58,938 [INFO] The voice handshake is being terminated for Channel ID 1496215232333349015 (Guild ID 1495816118521040946)
+2026-04-22 18:53:59,947 [INFO] Starting voice handshake... (connection attempt 2)
+2026-04-22 18:54:00,481 [INFO] Voice handshake complete. Endpoint found: c-hkg08-a1e98adf.discord.media:8443
+2026-04-22 18:54:00,605 [WARNING] Lofi ensure connection failed for guild 1495816118521040946: Already connected to a voice channel.
+2026-04-22 18:54:00,907 [ERROR] Failed to connect to voice... Retrying in 3.0s...
+Traceback (most recent call last):
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\voice_state.py", line 413, in _inner_connect
+    await self._handshake_websocket()
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\voice_state.py", line 586, in _handshake_websocket
+    await self.ws.poll_event()
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\gateway.py", line 1053, in poll_event
+    raise ConnectionClosed(self.ws, shard_id=None, code=self._close_code)
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 4017
+2026-04-22 18:54:00,912 [INFO] The voice handshake is being terminated for Channel ID 1496215232333349015 (Guild ID 1495816118521040946)
+2026-04-22 18:54:03,920 [INFO] Starting voice handshake... (connection attempt 3)
+2026-04-22 18:54:04,745 [INFO] Voice handshake complete. Endpoint found: c-hkg08-a1e98adf.discord.media:8443
+2026-04-22 18:54:05,196 [ERROR] Failed to connect to voice... Retrying in 5.0s...
+Traceback (most recent call last):
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\voice_state.py", line 413, in _inner_connect
+    await self._handshake_websocket()
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\voice_state.py", line 586, in _handshake_websocket
+    await self.ws.poll_event()
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\gateway.py", line 1053, in poll_event
+    raise ConnectionClosed(self.ws, shard_id=None, code=self._close_code)
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 4017
+2026-04-22 18:54:05,201 [INFO] The voice handshake is being terminated for Channel ID 1496215232333349015 (Guild ID 1495816118521040946)
+2026-04-22 18:54:10,218 [INFO] Starting voice handshake... (connection attempt 4)
+2026-04-22 18:54:10,739 [INFO] Voice handshake complete. Endpoint found: c-hkg08-a1e98adf.discord.media:8443
+2026-04-22 18:54:11,457 [ERROR] Failed to connect to voice... Retrying in 7.0s...
+Traceback (most recent call last):
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\voice_state.py", line 413, in _inner_connect
+    await self._handshake_websocket()
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\voice_state.py", line 586, in _handshake_websocket
+    await self.ws.poll_event()
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\gateway.py", line 1053, in poll_event
+    raise ConnectionClosed(self.ws, shard_id=None, code=self._close_code)
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 4017
+2026-04-22 18:54:11,460 [INFO] The voice handshake is being terminated for Channel ID 1496215232333349015 (Guild ID 1495816118521040946)
+2026-04-22 18:54:13,578 [INFO] Command-like message received from quen.xl: !join
+2026-04-22 18:54:13,592 [WARNING] Lofi ensure connection failed for guild 1495816118521040946: Already connected to a voice channel.
+2026-04-22 18:54:15,592 [WARNING] Lofi ensure connection failed for guild 1495816118521040946: Already connected to a voice channel.
+2026-04-22 18:54:18,496 [INFO] Starting voice handshake... (connection attempt 5)
+2026-04-22 18:54:19,089 [INFO] Voice handshake complete. Endpoint found: c-hkg08-a1e98adf.discord.media:8443
+2026-04-22 18:54:19,527 [ERROR] Failed to connect to voice... Retrying in 9.0s...
+Traceback (most recent call last):
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\voice_state.py", line 413, in _inner_connect
+    await self._handshake_websocket()
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\voice_state.py", line 586, in _handshake_websocket
+    await self.ws.poll_event()
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\gateway.py", line 1053, in poll_event
+    raise ConnectionClosed(self.ws, shard_id=None, code=self._close_code)
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 4017
+2026-04-22 18:54:19,532 [INFO] The voice handshake is being terminated for Channel ID 1496215232333349015 (Guild ID 1495816118521040946)
+2026-04-22 18:54:27,261 [INFO] Timed out connecting to voice
+2026-04-22 18:54:27,262 [INFO] The voice handshake is being terminated for Channel ID 1496215232333349015 (Guild ID 1495816118521040946)
+2026-04-22 18:54:27,266 [INFO] The voice handshake is being terminated for Channel ID 1496215232333349015 (Guild ID 1495816118521040946)
+2026-04-22 18:54:27,315 [INFO] Command-like message received from quen.xl: !join
+2026-04-22 18:54:27,321 [INFO] Connecting to voice...
+2026-04-22 18:54:27,322 [INFO] Starting voice handshake... (connection attempt 1)
+2026-04-22 18:54:27,877 [INFO] Voice handshake complete. Endpoint found: c-hkg08-a1e98adf.discord.media:8443
+2026-04-22 18:54:28,282 [ERROR] Failed to connect to voice... Retrying in 1.0s...
+Traceback (most recent call last):
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\voice_state.py", line 413, in _inner_connect
+    await self._handshake_websocket()
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\voice_state.py", line 586, in _handshake_websocket
+    await self.ws.poll_event()
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\gateway.py", line 1053, in poll_event
+    raise ConnectionClosed(self.ws, shard_id=None, code=self._close_code)
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 4017
+2026-04-22 18:54:28,290 [INFO] The voice handshake is being terminated for Channel ID 1496215232333349015 (Guild ID 1495816118521040946)
+2026-04-22 18:54:29,306 [INFO] Starting voice handshake... (connection attempt 2)
+2026-04-22 18:54:29,865 [INFO] Voice handshake complete. Endpoint found: c-hkg08-a1e98adf.discord.media:8443
+2026-04-22 18:54:30,321 [ERROR] Failed to connect to voice... Retrying in 3.0s...
+Traceback (most recent call last):
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\voice_state.py", line 413, in _inner_connect
+    await self._handshake_websocket()
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\voice_state.py", line 586, in _handshake_websocket
+    await self.ws.poll_event()
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\gateway.py", line 1053, in poll_event
+    raise ConnectionClosed(self.ws, shard_id=None, code=self._close_code)
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 4017
+2026-04-22 18:54:30,325 [INFO] The voice handshake is being terminated for Channel ID 1496215232333349015 (Guild ID 1495816118521040946)
+2026-04-22 18:54:30,644 [WARNING] Lofi ensure connection failed for guild 1495816118521040946: Already connected to a voice channel.
+2026-04-22 18:54:33,332 [INFO] Starting voice handshake... (connection attempt 3)
+2026-04-22 18:54:33,908 [INFO] Voice handshake complete. Endpoint found: c-hkg08-a1e98adf.discord.media:8443
+2026-04-22 18:54:34,641 [ERROR] Failed to connect to voice... Retrying in 5.0s...
+Traceback (most recent call last):
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\voice_state.py", line 413, in _inner_connect
+    await self._handshake_websocket()
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\voice_state.py", line 586, in _handshake_websocket
+    await self.ws.poll_event()
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\gateway.py", line 1053, in poll_event
+    raise ConnectionClosed(self.ws, shard_id=None, code=self._close_code)
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 4017
+2026-04-22 18:54:34,645 [INFO] The voice handshake is being terminated for Channel ID 1496215232333349015 (Guild ID 1495816118521040946)
+2026-04-22 18:54:35,161 [ERROR] Slash command error for help by quen.xl (836128654983168002): 400 Bad Request (error code: 40060): Interaction has already been acknowledged.
+Traceback (most recent call last):
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\app_commands\commands.py", line 859, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DC BOTS\Dragon-main\bot.py", line 3107, in help_slash
+    await interaction.response.send_message(embed=embeds[0], ephemeral=True)
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\interactions.py", line 1051, in send_message
+    response = await adapter.create_interaction_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\webhook\async_.py", line 226, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\app_commands\tree.py", line 1297, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\app_commands\commands.py", line 884, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\app_commands\commands.py", line 877, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'help' raised an exception: HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.
+2026-04-22 18:54:35,643 [WARNING] Failed to send slash command error response: ❌ Something went wrong while running this slash command. Please try again.
+2026-04-22 18:54:39,659 [INFO] Starting voice handshake... (connection attempt 4)
+2026-04-22 18:54:40,178 [INFO] Voice handshake complete. Endpoint found: c-hkg08-a1e98adf.discord.media:8443
+2026-04-22 18:54:40,959 [ERROR] Failed to connect to voice... Retrying in 7.0s...
+Traceback (most recent call last):
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\voice_state.py", line 413, in _inner_connect
+    await self._handshake_websocket()
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\voice_state.py", line 586, in _handshake_websocket
+    await self.ws.poll_event()
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\gateway.py", line 1053, in poll_event
+    raise ConnectionClosed(self.ws, shard_id=None, code=self._close_code)
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 4017
+2026-04-22 18:54:40,964 [INFO] The voice handshake is being terminated for Channel ID 1496215232333349015 (Guild ID 1495816118521040946)
+2026-04-22 18:54:45,604 [WARNING] Lofi ensure connection failed for guild 1495816118521040946: Already connected to a voice channel.
+2026-04-22 18:54:47,967 [INFO] Starting voice handshake... (connection attempt 5)
+2026-04-22 18:54:48,553 [INFO] Voice handshake complete. Endpoint found: c-hkg08-a1e98adf.discord.media:8443
+2026-04-22 18:54:48,976 [ERROR] Failed to connect to voice... Retrying in 9.0s...
+Traceback (most recent call last):
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\voice_state.py", line 413, in _inner_connect
+    await self._handshake_websocket()
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\voice_state.py", line 586, in _handshake_websocket
+    await self.ws.poll_event()
+  File "C:\Users\Xander James\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\discord\gateway.py", line 1053, in poll_event
+    raise ConnectionClosed(self.ws, shard_id=None, code=self._close_code)
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 4017
+2026-04-22 18:54:48,979 [INFO] The voice handshake is being terminated for Channel ID 1496215232333349015 (Guild ID 1495816118521040946)

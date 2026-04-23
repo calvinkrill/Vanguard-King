@@ -1,0 +1,37 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "registrar-bot",
+  "main": "cloudflare-worker/index.js",
+  "compatibility_date": "2026-03-18",
+  "triggers": {
+    "crons": [
+      "*/1 * * * *"
+    ]
+  },
+  "containers": [
+    {
+      "class_name": "RegistrarBotContainer",
+      "image": "./Dockerfile",
+      "max_instances": 2
+    }
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "REGISTRAR_BOT",
+        "class_name": "RegistrarBotContainer"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": [
+        "RegistrarBotContainer"
+      ]
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}

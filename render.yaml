@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: registrar-bot
+    env: python
+    buildCommand: python3 -m pip install -r requirements-runtime.txt
+    startCommand: python3 bot.py
+    disk:
+      name: bot_data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.12
+      - key: DB_FILE
+        value: /data/attendance.db
+      - key: DB_SNAPSHOT_FILE
+        value: /data/attendance_snapshot.json
+      - key: BOT_DATA_DIR
+        value: /data
+      - key: REQUIRE_PERSISTENT_STORAGE
+        value: "1"
+      - key: DISCORD_TOKEN
+        sync: false

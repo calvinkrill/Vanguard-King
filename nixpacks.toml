@@ -1,0 +1,10 @@
+providers = ["python"]
+
+[phases.setup]
+nixPkgs = ["ffmpeg"]
+
+[phases.install]
+cmds = ["python3 -m pip install -r requirements-runtime.txt"]
+
+[start]
+cmd = "python3 bot.py"

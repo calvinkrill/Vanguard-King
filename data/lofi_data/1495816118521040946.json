@@ -1,0 +1,12 @@
+{
+  "guild_id": 1495816118521040946,
+  "enabled": true,
+  "voice_channel_id": 1496215232333349015,
+  "stream_url": "https://play.streamafrica.net/lofiradio",
+  "volume": 0.5,
+  "music_queue": [],
+  "now_playing": null,
+  "backoff_seconds": 4,
+  "next_retry_at": 1776855287.6031883,
+  "last_error": "Already connected to a voice channel."
+}
