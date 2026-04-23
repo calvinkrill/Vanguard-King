@@ -69,6 +69,182 @@ CUTE_COMPLIMENTS = [
     "Serving soft vibes and charm 🌸",
 ]
 
+TOUCH_LINES = [
+    "{actor} touched {target} gently 💫",
+    "{actor} booped {target} 👆",
+    "{actor} poked {target} 👉",
+    "{actor} gave {target} a playful tap ✨",
+]
+
+TOUCH_GIFS = [
+    "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTFlc2tnMmo5NGh3Y3M4cHNxbjE2N3Q5YjVqd2R3cnh5N2M3M3Q3aiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ARSp9T7wwxNcs/giphy.gif",
+    "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWhpNTY1YWQ4a3N6eDh3ZHI5Mjk1ajB0Y2R0ZzhmdnF6NGJjaG94YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3o7btPCcdNniyf0ArS/giphy.gif",
+    "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTRocWQ4a2VhN3k4dG9lM2NwYjI3dHQzOGVhajZnMG5ybWFkc3N2biZlcD12MV9naWZzX3NlYXJjaCZjdD1n/4HP0ddZnNVvKU/giphy.gif",
+]
+
+_touch_cooldowns: dict[tuple[int, int], datetime.datetime] = {}
+
+
+def _utc_now() -> datetime.datetime:
+    return datetime.datetime.utcnow()
+
+
+def _iso_now_utc() -> str:
+    return _utc_now().isoformat() + "Z"
+
+
+def _parse_iso_utc(value: str) -> datetime.datetime | None:
+    if not value:
+        return None
+    cleaned = value.replace("Z", "+00:00")
+    try:
+        parsed = datetime.datetime.fromisoformat(cleaned)
+    except ValueError:
+        return None
+    if parsed.tzinfo:
+        parsed = parsed.astimezone(datetime.timezone.utc).replace(tzinfo=None)
+    return parsed
+
+
+def _build_touch_embed(actor: discord.Member | discord.User, target: discord.Member | discord.User) -> discord.Embed:
+    line = random.choice(TOUCH_LINES).format(actor=actor.mention, target=target.mention)
+    embed = discord.Embed(
+        title="✨ Action: Touch",
+        description=line,
+        color=discord.Color.blurple(),
+        timestamp=_utc_now(),
+    )
+    embed.set_image(url=random.choice(TOUCH_GIFS))
+    embed.set_footer(text=f"Used by {actor.display_name}")
+    return embed
+
+
+class PollVoteView(discord.ui.View):
+    def __init__(self, message_id: int, choices: list[str], end_at: datetime.datetime):
+        super().__init__(timeout=None)
+        self.message_id = int(message_id)
+        self.choices = choices
+        self.end_at = end_at
+        for idx, choice in enumerate(choices):
+            self.add_item(PollVoteButton(choice_index=idx, label=choice[:80], message_id=self.message_id))
+
+
+class PollVoteButton(discord.ui.Button):
+    def __init__(self, choice_index: int, label: str, message_id: int):
+        super().__init__(
+            label=label,
+            style=discord.ButtonStyle.primary,
+            custom_id=f"poll_vote:{message_id}:{choice_index}",
+        )
+        self.choice_index = int(choice_index)
+        self.message_id = int(message_id)
+
+    async def callback(self, interaction: discord.Interaction):
+        poll_entry = database.get_poll_entry(self.message_id)
+        if not poll_entry:
+            await interaction.response.send_message("❌ This poll no longer exists.", ephemeral=True)
+            return
+        if poll_entry.get("status") != "active":
+            await interaction.response.send_message("⛔ This poll is already closed.", ephemeral=True)
+            return
+
+        end_at = _parse_iso_utc(str(poll_entry.get("end_at") or ""))
+        if not end_at or end_at <= _utc_now():
+            await close_poll(self.message_id, interaction.client)
+            await interaction.response.send_message("⛔ Voting has ended for this poll.", ephemeral=True)
+            return
+
+        choices = poll_entry.get("choices") or []
+        if self.choice_index >= len(choices):
+            await interaction.response.send_message("❌ Invalid poll option selected.", ephemeral=True)
+            return
+
+        database.add_or_update_poll_vote(self.message_id, interaction.user.id, self.choice_index)
+        await interaction.response.send_message(
+            f"✅ Vote saved: **{choices[self.choice_index]}**.\nYou can change your vote until the poll closes.",
+            ephemeral=True,
+        )
+
+
+def _build_poll_open_embed(
+    question: str,
+    description: str | None,
+    created_by: discord.Member | discord.User,
+    end_at: datetime.datetime,
+    choices: list[str],
+) -> discord.Embed:
+    unix_end = int(end_at.timestamp())
+    embed = discord.Embed(
+        title=f"🗳️ {question}",
+        description=(description or "No description provided."),
+        color=discord.Color.green(),
+        timestamp=_utc_now(),
+    )
+    embed.add_field(name="Status", value="Voting Open", inline=True)
+    embed.add_field(name="Ends", value=f"<t:{unix_end}:F>\n<t:{unix_end}:R>", inline=True)
+    embed.add_field(name="Created By", value=created_by.mention, inline=True)
+    embed.add_field(
+        name="Choices",
+        value="\n".join(f"**{idx + 1}.** {choice}" for idx, choice in enumerate(choices)),
+        inline=False,
+    )
+    embed.set_footer(text=f"Poll by {created_by.display_name}")
+    return embed
+
+
+def _build_poll_result_embed(poll_entry: dict) -> discord.Embed:
+    choices = poll_entry.get("choices") or []
+    counts = database.get_poll_vote_counts(int(poll_entry["message_id"]))
+    total_voters = database.get_poll_total_voters(int(poll_entry["message_id"]))
+    max_votes = max((counts.get(i, 0) for i in range(len(choices))), default=0)
+    winners = [choices[i] for i in range(len(choices)) if counts.get(i, 0) == max_votes and max_votes > 0]
+    winner_line = "No votes were cast." if total_voters == 0 else ", ".join(winners)
+    tie_text = "It's a tie." if len(winners) > 1 and max_votes > 0 else "No tie."
+
+    lines = []
+    for idx, choice in enumerate(choices):
+        vote_count = counts.get(idx, 0)
+        percent = (vote_count / total_voters * 100) if total_voters else 0
+        lines.append(f"**{choice}** — {vote_count} vote(s) ({percent:.1f}%)")
+
+    embed = discord.Embed(
+        title="🧾 Poll Closed",
+        description=poll_entry.get("question") or "Poll",
+        color=discord.Color.orange(),
+        timestamp=_utc_now(),
+    )
+    embed.add_field(name="Total Voters", value=str(total_voters), inline=True)
+    embed.add_field(name="Winner", value=winner_line[:1024], inline=True)
+    embed.add_field(name="Tie", value=tie_text, inline=True)
+    embed.add_field(name="Results", value="\n".join(lines) if lines else "No options found.", inline=False)
+    return embed
+
+
+async def close_poll(message_id: int, client: discord.Client) -> tuple[bool, str]:
+    poll_entry = database.get_poll_entry(message_id)
+    if not poll_entry:
+        return False, "Poll not found."
+    if poll_entry.get("status") != "active":
+        return False, "Poll is already closed."
+
+    guild = client.get_guild(int(poll_entry["guild_id"]))
+    if not guild:
+        return False, "Guild unavailable for this poll."
+    channel = guild.get_channel(int(poll_entry["channel_id"]))
+    if not isinstance(channel, discord.TextChannel):
+        return False, "Poll channel is missing."
+
+    result_embed = _build_poll_result_embed(poll_entry)
+    database.mark_poll_closed(message_id)
+
+    try:
+        message = await channel.fetch_message(message_id)
+        await message.edit(embed=result_embed, view=None)
+    except discord.HTTPException:
+        await channel.send(embed=result_embed)
+
+    return True, "Poll closed."
+
 
 def _parse_role_id(raw_value: str | None) -> int:
     if not raw_value:
@@ -318,8 +494,129 @@ def _today_month_day() -> str:
     return now.strftime("%m-%d")
 
 
-def _iso_now_utc() -> str:
-    return datetime.datetime.utcnow().isoformat() + "Z"
+@app_commands.command(name="touch", description="Send a playful touch action to another user.")
+@app_commands.describe(user="Who should receive the touch action")
+@app_commands.checks.cooldown(1, 10.0)
+async def touch(interaction: discord.Interaction, user: discord.Member):
+    if user.id == interaction.user.id:
+        await interaction.response.send_message("😅 You can't use /touch on yourself.", ephemeral=True)
+        return
+    if user.bot:
+        await interaction.response.send_message("🤖 You can't use /touch on bots.", ephemeral=True)
+        return
+
+    guild_id = interaction.guild.id if interaction.guild else 0
+    key = (guild_id, interaction.user.id)
+    now = _utc_now()
+    ready_at = _touch_cooldowns.get(key)
+    if ready_at and ready_at > now:
+        remaining = int((ready_at - now).total_seconds())
+        await interaction.response.send_message(
+            f"⏳ Slow down! You can use `/touch` again in **{max(1, remaining)}s**.",
+            ephemeral=True,
+        )
+        return
+
+    _touch_cooldowns[key] = now + datetime.timedelta(seconds=10)
+    embed = _build_touch_embed(interaction.user, user)
+    await interaction.response.send_message(content=user.mention, embed=embed)
+
+
+@touch.error
+async def touch_error(interaction: discord.Interaction, error: app_commands.AppCommandError):
+    if isinstance(error, app_commands.CommandOnCooldown):
+        await interaction.response.send_message(
+            f"⏳ You're on cooldown. Try again in **{error.retry_after:.1f}s**.",
+            ephemeral=True,
+        )
+        return
+    raise error
+
+
+def _normalize_poll_choices(choices_raw: str | None) -> list[str]:
+    if not choices_raw:
+        return ["Yes", "No", "Abstain"]
+    items = [chunk.strip() for chunk in choices_raw.split(",")]
+    cleaned = [item for item in items if item]
+    unique: list[str] = []
+    seen = set()
+    for item in cleaned:
+        lowered = item.lower()
+        if lowered in seen:
+            continue
+        seen.add(lowered)
+        unique.append(item[:80])
+        if len(unique) >= 5:
+            break
+    return unique if len(unique) >= 2 else ["Yes", "No", "Abstain"]
+
+
+@app_commands.command(name="poll", description="Create an official poll with voting buttons.")
+@app_commands.default_permissions(manage_guild=True)
+@app_commands.describe(
+    question="Poll title/question",
+    duration_minutes="How long voting should stay open (minutes)",
+    choices_csv="Optional comma-separated choices (defaults: Yes,No,Abstain)",
+    description="Optional poll details",
+)
+async def poll(
+    interaction: discord.Interaction,
+    question: str,
+    duration_minutes: app_commands.Range[int, 1, 10080],
+    choices_csv: str | None = None,
+    description: str | None = None,
+):
+    if not interaction.guild:
+        await interaction.response.send_message("This command can only be used in a server.", ephemeral=True)
+        return
+    if not interaction.user.guild_permissions.manage_guild:
+        await interaction.response.send_message("You need Manage Server permission to use this.", ephemeral=True)
+        return
+
+    choices = _normalize_poll_choices(choices_csv)
+    end_at = _utc_now() + datetime.timedelta(minutes=int(duration_minutes))
+    embed = _build_poll_open_embed(
+        question=question[:256],
+        description=description[:1500] if description else None,
+        created_by=interaction.user,
+        end_at=end_at,
+        choices=choices,
+    )
+
+    await interaction.response.send_message(embed=embed)
+    poll_message = await interaction.original_response()
+    view = PollVoteView(message_id=poll_message.id, choices=choices, end_at=end_at)
+    await poll_message.edit(view=view)
+
+    database.upsert_poll_entry(
+        message_id=poll_message.id,
+        guild_id=interaction.guild.id,
+        channel_id=interaction.channel_id,
+        question=question[:256],
+        description=(description[:1500] if description else None),
+        choices=choices,
+        created_by_user_id=interaction.user.id,
+        end_at=end_at.isoformat() + "Z",
+        status="active",
+    )
+
+
+@app_commands.command(name="vote", description="Alias of /poll for creating staff voting polls.")
+@app_commands.default_permissions(manage_guild=True)
+async def vote(
+    interaction: discord.Interaction,
+    question: str,
+    duration_minutes: app_commands.Range[int, 1, 10080],
+    choices_csv: str | None = None,
+    description: str | None = None,
+):
+    await poll(
+        interaction=interaction,
+        question=question,
+        duration_minutes=duration_minutes,
+        choices_csv=choices_csv,
+        description=description,
+    )
 
 
 @app_commands.command(name="brainrot", description="Drop a random chaotic brainrot line.")
@@ -905,6 +1202,12 @@ async def process_due_giveaways(client: discord.Client):
         await end_giveaway(int(entry["message_id"]), client, reroll=False)
 
 
+async def process_due_polls(client: discord.Client):
+    due = database.list_due_polls(_iso_now_utc())
+    for entry in due:
+        await close_poll(int(entry["message_id"]), client)
+
+
 async def process_birthdays(client: discord.Client):
     today = datetime.datetime.utcnow().date()
     today_md = today.strftime("%m-%d")
@@ -1404,6 +1707,9 @@ async def ticket_transcript(interaction: discord.Interaction):
 
 
 def register_extended_slash_commands(bot: discord.Client):
+    bot.tree.add_command(touch)
+    bot.tree.add_command(poll)
+    bot.tree.add_command(vote)
     bot.tree.add_command(brainrot)
     bot.tree.add_command(meme)
     bot.tree.add_command(sound)

@@ -82,3 +82,36 @@ def test_staff_tracker_strikes_increment_and_case_creation(tmp_path, monkeypatch
         audit_entry_id=555,
     )
     assert case_id.startswith("ST-")
+
+
+def test_poll_entry_vote_and_close_flow(tmp_path, monkeypatch):
+    db_path = tmp_path / "attendance.db"
+    snapshot_path = tmp_path / "snapshot.json"
+    monkeypatch.setattr(database, "DB_FILE", str(db_path))
+    monkeypatch.setattr(database, "SNAPSHOT_FILE", str(snapshot_path))
+    database.init_db()
+
+    database.upsert_poll_entry(
+        message_id=111,
+        guild_id=222,
+        channel_id=333,
+        question="Ship the feature?",
+        description="Quick vote",
+        choices=["Yes", "No", "Abstain"],
+        created_by_user_id=444,
+        end_at="2099-01-01T00:00:00Z",
+    )
+    entry = database.get_poll_entry(111)
+    assert entry is not None
+    assert entry["choices"] == ["Yes", "No", "Abstain"]
+
+    database.add_or_update_poll_vote(111, user_id=1001, choice_index=0)
+    database.add_or_update_poll_vote(111, user_id=1002, choice_index=1)
+    database.add_or_update_poll_vote(111, user_id=1002, choice_index=0)
+    counts = database.get_poll_vote_counts(111)
+    assert counts[0] == 2
+    assert database.get_poll_total_voters(111) == 2
+
+    assert database.mark_poll_closed(111) is True
+    closed_entry = database.get_poll_entry(111)
+    assert closed_entry["status"] == "closed"
