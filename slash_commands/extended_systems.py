@@ -77,11 +77,9 @@ TOUCH_LINES = [
 ]
 
 TOUCH_GIFS = [
-    # Keep touch-only media so /touch always matches the action theme.
-    "https://media.tenor.com/images/9306f3af835f2f2208a4f59277d20a38/tenor.gif",  # touch anime
-    "https://media.tenor.com/images/cf38ac9f2444321f25d4f52a7f7fd4f2/tenor.gif",  # touching hand
-    "https://media.tenor.com/images/4b4b3dd076dfbc9055190f7fef6508a5/tenor.gif",  # gentle touch
-    "https://media.tenor.com/images/885a57f12696a94ea362f993cd8962f5/tenor.gif",  # cheek touch
+    "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTFlc2tnMmo5NGh3Y3M4cHNxbjE2N3Q5YjVqd2R3cnh5N2M3M3Q3aiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ARSp9T7wwxNcs/giphy.gif",
+    "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWhpNTY1YWQ4a3N6eDh3ZHI5Mjk1ajB0Y2R0ZzhmdnF6NGJjaG94YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3o7btPCcdNniyf0ArS/giphy.gif",
+    "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTRocWQ4a2VhN3k4dG9lM2NwYjI3dHQzOGVhajZnMG5ybWFkc3N2biZlcD12MV9naWZzX3NlYXJjaCZjdD1n/4HP0ddZnNVvKU/giphy.gif",
 ]
 
 _touch_cooldowns: dict[tuple[int, int], datetime.datetime] = {}
@@ -110,15 +108,13 @@ def _parse_iso_utc(value: str) -> datetime.datetime | None:
 
 def _build_touch_embed(actor: discord.Member | discord.User, target: discord.Member | discord.User) -> discord.Embed:
     line = random.choice(TOUCH_LINES).format(actor=actor.mention, target=target.mention)
-    touch_only_gifs = [gif for gif in TOUCH_GIFS if "touch" in gif.lower() or "tenor" in gif.lower()]
-    gif_url = random.choice(touch_only_gifs or TOUCH_GIFS)
     embed = discord.Embed(
         title="✨ Action: Touch",
         description=line,
         color=discord.Color.blurple(),
         timestamp=_utc_now(),
     )
-    embed.set_image(url=gif_url)
+    embed.set_image(url=random.choice(TOUCH_GIFS))
     embed.set_footer(text=f"Used by {actor.display_name}")
     return embed
 
