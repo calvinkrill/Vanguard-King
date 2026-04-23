@@ -5425,6 +5425,62 @@ async def say_slash(interaction: discord.Interaction, message: str):
     )
 
 
+@bot.tree.command(name="message", description="Send a rich embed message with title, message text, and optional image.")
+@app_commands.describe(
+    title="Embed title",
+    message="Embed message body",
+    image="Optional image URL to show in the embed"
+)
+async def message_embed_slash(
+    interaction: discord.Interaction,
+    title: str,
+    message: str,
+    image: Optional[str] = None
+):
+    channel = interaction.channel
+    guild = interaction.guild
+    if channel is None or guild is None:
+        await interaction.response.send_message("This command can only be used in a server text channel.", ephemeral=True)
+        return
+
+    image_url = None
+    if image:
+        parsed = urlparse(image.strip())
+        if parsed.scheme not in ("http", "https") or not parsed.netloc:
+            await interaction.response.send_message(
+                "Please provide a valid image URL that starts with http:// or https://.",
+                ephemeral=True
+            )
+            return
+        image_url = image.strip()
+
+    embed = discord.Embed(
+        title=title.strip(),
+        description=message,
+        color=discord.Color.blurple(),
+        timestamp=discord.utils.utcnow()
+    )
+    embed.set_author(name=interaction.user.display_name, icon_url=interaction.user.display_avatar.url)
+    embed.add_field(name="Server", value=guild.name, inline=False)
+    if image_url:
+        embed.set_image(url=image_url)
+    embed.set_footer(text=f"Author ID: {interaction.user.id}")
+
+    await interaction.response.send_message("✅ Embedded message sent.", ephemeral=True)
+    await channel.send(embed=embed)
+
+    log_content = f"[EMBED] Title: {title} | Message: {message}"
+    if image_url:
+        log_content += f" | Image: {image_url}"
+    await log_say_message(
+        guild=guild,
+        actor=interaction.user,
+        source_channel=channel,
+        content=log_content,
+        origin="Slash (/message)"
+    )
+
+
 @bot.tree.command(name="automod", description="Toggle AutoMod (links, spam burst, and bad words) for this server.")
 @app_commands.default_permissions(manage_guild=True)
 @app_commands.describe(state="Turn AutoMod on or off")
