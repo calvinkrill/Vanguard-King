@@ -5755,8 +5755,7 @@ async def _send_announcement_to_channels(
 
     for channel in unique_channels:
         try:
-            ping_content = f"📢 SERVER ANNOUNCEMENT! {ping_role.mention}" if ping_role else None
-            await channel.send(content=ping_content, embed=embed)
+            await channel.send(content=ping_role.mention if ping_role else None, embed=embed)
             sent_mentions.append(channel.mention)
         except Exception as e:
             logger.warning("Failed to send announcement in guild %s channel %s: %s", interaction.guild_id, channel.id, e)
