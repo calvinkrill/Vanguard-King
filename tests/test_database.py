@@ -15,6 +15,25 @@ def test_resolve_db_file_uses_db_dir_env(monkeypatch):
     assert database.resolve_db_file() == "/tmp/data-dir/attendance.db"
 
 
+def test_resolve_db_file_uses_bot_data_dir_env(monkeypatch):
+    monkeypatch.delenv("DB_FILE", raising=False)
+    monkeypatch.delenv("DB_DIR", raising=False)
+    monkeypatch.setenv("BOT_DATA_DIR", "/tmp/bot-data")
+    assert database.resolve_db_file() == "/tmp/bot-data/attendance.db"
+
+
+def test_resolve_snapshot_file_prefers_snapshot_env(monkeypatch):
+    monkeypatch.setenv("DB_SNAPSHOT_FILE", "/tmp/custom-snapshot.json")
+    monkeypatch.delenv("BOT_DATA_DIR", raising=False)
+    assert database.resolve_snapshot_file("/tmp/attendance.db") == "/tmp/custom-snapshot.json"
+
+
+def test_resolve_snapshot_file_uses_bot_data_dir(monkeypatch):
+    monkeypatch.delenv("DB_SNAPSHOT_FILE", raising=False)
+    monkeypatch.setenv("BOT_DATA_DIR", "/tmp/bot-data")
+    assert database.resolve_snapshot_file("/tmp/attendance.db") == "/tmp/bot-data/attendance_snapshot.json"
+
+
 def test_resolve_db_file_requires_persistent_storage_when_enabled(monkeypatch):
     monkeypatch.delenv("DB_FILE", raising=False)
     monkeypatch.delenv("DB_DIR", raising=False)
