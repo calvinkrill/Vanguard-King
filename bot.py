@@ -8796,7 +8796,18 @@ async def vcmsgdelete(
         await ctx.defer(ephemeral=True)
 
     try:
+<<<<<<< codex/fix-typeerror-in-vchanneldeletemessage-qscdht
         messages = [message async for message in target_channel.history(limit=amount, oldest_first=False)]
+=======
+        async for message in target_channel.history(limit=amount, oldest_first=False):
+            try:
+                # Voice/stage channel chat history can yield PartialMessage objects, and
+                # PartialMessage.delete() does not accept a `reason` kwarg.
+                await message.delete()
+                deleted += 1
+            except (discord.Forbidden, discord.HTTPException):
+                failed += 1
+>>>>>>> main
     except (discord.Forbidden, discord.HTTPException):
         summary = f"⚠️ I couldn't read chat history for {target_channel.mention}. Check my permissions."
         if ctx.interaction:
