@@ -6364,6 +6364,56 @@ async def setup_confession(
     await ctx.send(embed=embed)
 
 
+@bot.tree.command(name="confession", description="Setup and save confession channel settings.")
+@app_commands.default_permissions(manage_channels=True)
+@app_commands.describe(
+    confession_channel="Channel where anonymous confessions are posted.",
+    log_channel="Channel used for confession logs.",
+    author_channel="Channel used for confession author mapping."
+)
+async def confession_setup_slash(
+    interaction: discord.Interaction,
+    confession_channel: Union[discord.TextChannel, None] = None,
+    log_channel: Union[discord.TextChannel, None] = None,
+    author_channel: Union[discord.TextChannel, None] = None
+):
+    guild = interaction.guild
+    if guild is None:
+        await interaction.response.send_message("❌ This command can only be used in a server.", ephemeral=True)
+        return
+
+    confession_channel = confession_channel or discord.utils.get(guild.text_channels, name="confession")
+    log_channel = log_channel or discord.utils.get(guild.text_channels, name="confession-logs")
+    review_channel = discord.utils.get(guild.text_channels, name="confession-review")
+    author_channel = author_channel or discord.utils.get(guild.text_channels, name="confession-authors")
+    moderator_role = discord.utils.get(guild.roles, name="Confession Moderator")
+
+    try:
+        if confession_channel is None:
+            confession_channel = await guild.create_text_channel("confession", reason=f"Created by {interaction.user} via /confession")
+        if log_channel is None:
+            log_channel = await guild.create_text_channel("confession-logs", reason=f"Created by {interaction.user} via /confession")
+        if review_channel is None:
+            review_channel = await guild.create_text_channel("confession-review", reason=f"Created by {interaction.user} via /confession")
+        if author_channel is None:
+            author_channel = await guild.create_text_channel("confession-authors", reason=f"Created by {interaction.user} via /confession")
+        if moderator_role is None:
+            moderator_role = await guild.create_role(name="Confession Moderator", mentionable=True, reason=f"Created by {interaction.user} via /confession")
+    except discord.Forbidden:
+        await interaction.response.send_message("❌ I need Manage Channels and Manage Roles permissions to save confession setup.", ephemeral=True)
+        return
+
+    embed = await _apply_confession_configuration(
+        guild_id=guild.id,
+        confession_channel=confession_channel,
+        log_channel=log_channel,
+        review_channel=review_channel,
+        author_channel=author_channel,
+        moderator_role=moderator_role
+    )
+    await interaction.response.send_message(embed=embed, ephemeral=True)
+
+
 @bot.tree.command(name="configconfession", description="Show confession configuration summary.")
 @app_commands.default_permissions(manage_channels=True)
 async def config_confession_slash(
