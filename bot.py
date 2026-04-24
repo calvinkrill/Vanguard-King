@@ -8772,9 +8772,9 @@ async def delete_all_message(ctx):
 
 
 @bot.hybrid_command(
-    name='vchatdeletemessage',
+    name='vcmsgdelete',
     with_app_command=True,
-    description="Delete messages from a voice channel chat."
+    description="Instantly delete messages from a voice/stage channel chat."
 )
 @app_commands.describe(
     channel="Voice or stage channel whose chat messages should be deleted (defaults to current channel).",
@@ -8782,7 +8782,7 @@ async def delete_all_message(ctx):
 )
 @commands.has_permissions(manage_messages=True)
 @commands.guild_only()
-async def vchat_delete_message(
+async def vcmsgdelete(
     ctx,
     channel: discord.VoiceChannel | None = None,
     amount: app_commands.Range[int, 1, 500] = 100,
@@ -8795,10 +8795,10 @@ async def vchat_delete_message(
     if ctx.interaction:
         await ctx.defer(ephemeral=True)
 
-    deleted = 0
-    failed = 0
-
     try:
+<<<<<<< codex/fix-typeerror-in-vchanneldeletemessage-qscdht
+        messages = [message async for message in target_channel.history(limit=amount, oldest_first=False)]
+=======
         async for message in target_channel.history(limit=amount, oldest_first=False):
             try:
                 # Voice/stage channel chat history can yield PartialMessage objects, and
@@ -8807,6 +8807,7 @@ async def vchat_delete_message(
                 deleted += 1
             except (discord.Forbidden, discord.HTTPException):
                 failed += 1
+>>>>>>> main
     except (discord.Forbidden, discord.HTTPException):
         summary = f"⚠️ I couldn't read chat history for {target_channel.mention}. Check my permissions."
         if ctx.interaction:
@@ -8814,6 +8815,12 @@ async def vchat_delete_message(
         else:
             await ctx.send(summary)
         return
+
+    # Delete concurrently to make clears feel instant for users.
+    delete_tasks = [message.delete() for message in messages]
+    results = await asyncio.gather(*delete_tasks, return_exceptions=True)
+    deleted = sum(1 for result in results if not isinstance(result, Exception))
+    failed = len(results) - deleted
 
     summary = (
         f"✅ Deleted **{deleted}** message(s) from {target_channel.mention} chat."
