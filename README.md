@@ -339,6 +339,7 @@ After setup, use:
 | `/setupnick` | Shows the autonick setup command list (`!autonick`, `!defaultnick`, `!removenick`, `!updateall`, `!removeall`, `!stripall`). |
 | `/setup247music` | Configure voice channel + stream URL for always-on 24/7 lofi music. |
 | `/setupconfession` | Configure confession channel and optional confession log channel. |
+| `/confession` | Setup and save confession channel settings (creates missing channels/role). |
 | `/confess` | Submit an anonymous confession message. |
 | `/join` | Join your current voice channel and start 24/7 lofi. |
 | `/playlofi [url]` | Set default/custom stream URL and begin streaming. |
