@@ -38,6 +38,10 @@ def resolve_db_file():
     if configured_dir:
         return str(Path(configured_dir) / "attendance.db")
 
+    bot_data_dir = os.getenv("BOT_DATA_DIR")
+    if bot_data_dir:
+        return str(Path(bot_data_dir) / "attendance.db")
+
     # Prefer known platform volume mounts when DB_FILE/DB_DIR is not set.
     # This keeps leaderboard/stats data across bot restarts and redeploys.
     platform_volume_dir = (
@@ -95,8 +99,21 @@ def resolve_db_file():
     return "attendance.db"
 
 
+def resolve_snapshot_file(db_file: str) -> str:
+    """Choose where JSON snapshot backups should be stored."""
+    configured_snapshot = os.getenv("DB_SNAPSHOT_FILE")
+    if configured_snapshot:
+        return configured_snapshot
+
+    bot_data_dir = os.getenv("BOT_DATA_DIR")
+    if bot_data_dir:
+        return str(Path(bot_data_dir) / "attendance_snapshot.json")
+
+    return str(Path(db_file).with_name("attendance_snapshot.json"))
+
+
 DB_FILE = resolve_db_file()
-SNAPSHOT_FILE = os.getenv("DB_SNAPSHOT_FILE", str(Path(DB_FILE).with_name("attendance_snapshot.json")))
+SNAPSHOT_FILE = resolve_snapshot_file(DB_FILE)
 SNAPSHOT_TABLES = (
     "guild_configs",
     "attendance_records",
@@ -143,10 +160,11 @@ def write_snapshot():
         snapshot_path = Path(SNAPSHOT_FILE)
         ensure_parent_directory(snapshot_path)
         payload = export_all_data()
-        snapshot_path.write_text(
-            json.dumps(payload, indent=2, sort_keys=True),
-            encoding="utf-8"
-        )
+        serialized = json.dumps(payload, indent=2, sort_keys=True)
+        with snapshot_path.open("w", encoding="utf-8") as snapshot_handle:
+            snapshot_handle.write(serialized)
+            snapshot_handle.flush()
+            os.fsync(snapshot_handle.fileno())
     except Exception as e:
         logger.warning("Failed to write snapshot %s: %s", SNAPSHOT_FILE, e)
 
