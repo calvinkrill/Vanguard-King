@@ -10696,6 +10696,15 @@ async def on_app_command_error(interaction: discord.Interaction, error: app_comm
             await interaction.followup.send(message, ephemeral=True)
         else:
             await interaction.response.send_message(message, ephemeral=True)
+    except discord.InteractionResponded:
+        # A response may complete between `is_done()` and `send_message()` due to race conditions.
+        try:
+            await interaction.followup.send(message, ephemeral=True)
+        except discord.HTTPException:
+            logger.warning("Failed to send slash command error follow-up response: %s", message)
+    except discord.NotFound:
+        # Interaction token may have expired before we could send an error message.
+        logger.warning("Failed to send slash command error response because the interaction expired.")
     except discord.HTTPException:
         logger.warning("Failed to send slash command error response: %s", message)
 
