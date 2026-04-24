@@ -8801,7 +8801,9 @@ async def vchat_delete_message(
     try:
         async for message in target_channel.history(limit=amount, oldest_first=False):
             try:
-                await message.delete(reason=f"VC chat clear requested by {ctx.author} ({ctx.author.id})")
+                # Voice/stage channel chat history can yield PartialMessage objects, and
+                # PartialMessage.delete() does not accept a `reason` kwarg.
+                await message.delete()
                 deleted += 1
             except (discord.Forbidden, discord.HTTPException):
                 failed += 1
