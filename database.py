@@ -54,7 +54,14 @@ def resolve_db_file():
     if persistent_dir.exists() and persistent_dir.is_dir():
         candidate_dirs.append((persistent_dir, True))
 
-    candidate_dirs.append((Path("data"), False))
+    # Use a stable fallback relative to this source file so DB location
+    # doesn't change when process working directory changes across deploys.
+    project_data_dir = Path(__file__).resolve().parent / "data"
+    candidate_dirs.append((project_data_dir, False))
+    # Keep legacy cwd-based path for backward compatibility with older installs.
+    legacy_cwd_data_dir = Path("data")
+    if legacy_cwd_data_dir != project_data_dir:
+        candidate_dirs.append((legacy_cwd_data_dir, False))
 
     require_persistent = _env_flag("REQUIRE_PERSISTENT_STORAGE", "0")
     if require_persistent and not any(is_persistent for _, is_persistent in candidate_dirs):
@@ -67,6 +74,16 @@ def resolve_db_file():
             "No persistent storage mount detected on hosted platform; falling back to ephemeral local storage. "
             "Set DB_FILE/DB_DIR or mount a volume to persist attendance data."
         )
+
+    # Prefer an already-populated database when one exists.
+    for directory, _ in candidate_dirs:
+        existing_db = directory / "attendance.db"
+        if existing_db.exists():
+            try:
+                directory.mkdir(parents=True, exist_ok=True)
+                return str(existing_db)
+            except OSError:
+                continue
 
     for directory, _ in candidate_dirs:
         try:
