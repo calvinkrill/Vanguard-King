@@ -8806,10 +8806,20 @@ async def vcmsgdelete(
             await ctx.send(summary)
         return
 
-    # Delete concurrently to make clears feel instant for users.
-    delete_tasks = [message.delete() for message in messages]
-    results = await asyncio.gather(*delete_tasks, return_exceptions=True)
-    deleted = sum(1 for result in results if not isinstance(result, Exception))
+    # Delete concurrently (bounded) to make clears feel instant without
+    # overwhelming the API with hundreds of simultaneous delete requests.
+    semaphore = asyncio.Semaphore(10)
+
+    async def _delete_one(msg: discord.Message):
+        async with semaphore:
+            try:
+                await msg.delete()
+                return True
+            except (discord.Forbidden, discord.HTTPException):
+                return False
+
+    results = await asyncio.gather(*(_delete_one(message) for message in messages))
+    deleted = sum(1 for ok in results if ok)
     failed = len(results) - deleted
 
     summary = (
