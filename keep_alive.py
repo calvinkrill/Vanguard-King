@@ -1,10 +1,14 @@
 import json
+import logging
 import os
+import time
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from threading import Thread
 from urllib.parse import unquote, urlparse
 import database
+
+logger = logging.getLogger(__name__)
 
 
 DASHBOARD_HTML = """<!doctype html>
@@ -142,9 +146,25 @@ class _HealthHandler(BaseHTTPRequestHandler):
 
 
 def run():
-    port = int(os.environ.get("PORT", 8080))
-    server = ThreadingHTTPServer(("0.0.0.0", port), _HealthHandler)
-    server.serve_forever()
+    raw_port = os.environ.get("PORT", "8080")
+    try:
+        port = int(raw_port)
+    except (TypeError, ValueError):
+        logger.warning("Invalid PORT value %r. Falling back to 8080.", raw_port)
+        port = 8080
+
+    while True:
+        try:
+            server = ThreadingHTTPServer(("0.0.0.0", port), _HealthHandler)
+            logger.info("Health server listening on 0.0.0.0:%s", port)
+            server.serve_forever()
+        except OSError as exc:
+            # Keep retrying so health checks recover if port binding races happen.
+            logger.error("Health server failed to bind/start on port %s: %s", port, exc)
+            time.sleep(2)
+        except Exception as exc:
+            logger.error("Health server crashed: %s", exc, exc_info=True)
+            time.sleep(2)
 
 
 def keep_alive():
