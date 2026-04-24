@@ -6309,25 +6309,33 @@ async def _apply_confession_configuration(
     )
 
 
-@bot.hybrid_command(name='setupconfession', with_app_command=True, description="First-time confession setup (auto creates required channels + role).")
+@bot.hybrid_command(name='setupconfession', with_app_command=True, description="Setup confession channels (optionally choose channels).")
+@app_commands.describe(
+    confession_channel="Channel where anonymous confessions are posted.",
+    log_channel="Channel used for confession logs.",
+    author_channel="Channel used for confession author mapping."
+)
 @commands.has_permissions(manage_channels=True)
 async def setup_confession(
-    ctx
+    ctx,
+    confession_channel: Union[discord.TextChannel, None] = None,
+    log_channel: Union[discord.TextChannel, None] = None,
+    author_channel: Union[discord.TextChannel, None] = None
 ):
     """
     Setup anonymous confession channels.
-    Usage: !setupconfession
-    Slash usage: /setupconfession
+    Usage: !setupconfession [#confession] [#confession-logs] [#confession-authors]
+    Slash usage: /setupconfession (optional channel picks)
     """
     guild = ctx.guild
     if guild is None:
         await ctx.send("❌ This command can only be used in a server.")
         return
 
-    confession_channel = discord.utils.get(guild.text_channels, name="confession")
-    log_channel = discord.utils.get(guild.text_channels, name="confession-logs")
+    confession_channel = confession_channel or discord.utils.get(guild.text_channels, name="confession")
+    log_channel = log_channel or discord.utils.get(guild.text_channels, name="confession-logs")
     review_channel = discord.utils.get(guild.text_channels, name="confession-review")
-    author_channel = discord.utils.get(guild.text_channels, name="confession-authors")
+    author_channel = author_channel or discord.utils.get(guild.text_channels, name="confession-authors")
     moderator_role = discord.utils.get(guild.roles, name="Confession Moderator")
 
     try:
